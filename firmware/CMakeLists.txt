@@ -1,2 +1,3 @@
-idf_component_register(SRCS "main/main.c" "main/sensor_task.c" "main/inference_task.c" "main/comms_task.c" "main/led_task.c"
-                    INCLUDE_DIRS "include")
+cmake_minimum_required(VERSION 3.16)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(edge-ai-iot-monitor)

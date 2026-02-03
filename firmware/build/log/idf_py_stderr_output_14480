@@ -1,0 +1,41 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\edge-ai-iot-monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py' '-p' 'COM5'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.9.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Espressif\python_env\idf5.5_py3.13_env\Lib\site-packages\esp_idf_monitor\__main__.py", line 4, in <module>
+    main()
+    ~~~~^^
+  File "C:\Espressif\python_env\idf5.5_py3.13_env\Lib\site-packages\esp_idf_monitor\idf_monitor.py", line 529, in main
+    monitor.main_loop()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Espressif\python_env\idf5.5_py3.13_env\Lib\site-packages\esp_idf_monitor\idf_monitor.py", line 254, in main_loop
+    self._main_loop()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Espressif\python_env\idf5.5_py3.13_env\Lib\site-packages\esp_idf_monitor\idf_monitor.py", line 384, in _main_loop
+    super()._main_loop()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Espressif\python_env\idf5.5_py3.13_env\Lib\site-packages\esp_idf_monitor\idf_monitor.py", line 303, in _main_loop
+    self.serial_handler.handle_serial_input(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        self.check_gdb_stub_and_run,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Espressif\python_env\idf5.5_py3.13_env\Lib\site-packages\esp_idf_monitor\base\serial_handler.py", line 208, in handle_serial_input
+    text_lines, self._last_line_part = self.binlog.convert_to_text(sp[0])
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Espressif\python_env\idf5.5_py3.13_env\Lib\site-packages\esp_idf_monitor\base\binlog.py", line 267, in convert_to_text
+    messages.append(self.format_message(msg))
+                    ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Espressif\python_env\idf5.5_py3.13_env\Lib\site-packages\esp_idf_monitor\base\binlog.py", line 272, in format_message
+    level_name = {1: 'E', 2: 'W', 3: 'I', 4: 'D', 5: 'V'}[message.control.level]
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 0

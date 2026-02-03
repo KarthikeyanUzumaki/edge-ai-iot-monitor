@@ -1,16 +1,22 @@
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "sensor_task.h"
-#include "inference_task.h"
-#include "comms_task.h"
+#include "driver/gpio.h"
 
-void app_main(void)
-{
-    printf("Edge AI IoT Monitor Starting...\n");
+#define My_led GPIO_NUM_2
 
-    // Initialize tasks
-    xTaskCreate(sensor_task, "sensor_task", 4096, NULL, 5, NULL);
-    xTaskCreate(inference_task, "inference_task", 4096, NULL, 5, NULL);
-    xTaskCreate(comms_task, "comms_task", 4096, NULL, 5, NULL);
+void app_main(void){
+    gpio_reset_pin(My_led);
+    gpio_set_direction(My_led, GPIO_MODE_OUTPUT);
+    float i=0;
+    while(i<10){
+        gpio_set_level(My_led, 1);
+        printf("LED is ON\n");
+        vTaskDelay(500/ portTICK_PERIOD_MS);
+        gpio_set_level(My_led, 0);
+        printf("LED is OFF\n");
+        vTaskDelay(1000/ portTICK_PERIOD_MS);
+        i=i+ 1;
+    }
+    printf("Blinking Ended\n");
 }
