@@ -66,3 +66,4 @@ Instead of sending raw data blindly, the firmware analyzes temperature and humid
 ## 👨‍💻 Author
 *Karthikeyan B*
 *Embedded Systems & Full-Stack Developer*
+*EDGE AI DEVELOPER*
