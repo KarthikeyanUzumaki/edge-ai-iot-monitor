@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "iot_monitor",
-    "project_version":    "6498c78-dirty",
+    "project_version":    "8cdab94-dirty",
     "project_path":       "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.5.2-2",
     "build_dir":          "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build",
@@ -1225,7 +1225,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/main.c" ],
+            "sources": [ "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/main.c", "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/dht_driver.c", "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/wifi_manager.c", "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/edge_ai.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

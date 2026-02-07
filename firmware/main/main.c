@@ -1,212 +1,114 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "freertos/event_groups.h"
-#include "esp_system.h"
-#include "esp_wifi.h"
-#include "esp_event.h"
-#include "esp_log.h"
-#include "nvs_flash.h"
-#include "esp_http_client.h"
-#include "driver/gpio.h"
 #include "cJSON.h"
-#include "esp_timer.h"
-#include "rom/ets_sys.h"
+#include "esp_http_client.h"
+#include "esp_log.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/queue.h"
+#include "freertos/task.h"
+#include "nvs_flash.h"
+#include <stdio.h>
 
-// ====================================================
-// CONFIGURATION (EDIT THESE 3 LINES)
-// ====================================================
-#define WIFI_SSID      "ACT_0E41_5G"
-#define WIFI_PASS      "EMACxt8B"
-#define SERVER_URL     "http://192.168.0.105:5000/data"  // <--- CHANGED .106 to .105
+#include "dht_driver.h"
+#include "edge_ai.h"
+#include "wifi_manager.h"
 
-// HARDWARE PIN DEFINITIONS
-#define DHT_PIN        GPIO_NUM_15            // <--- UPDATED TO PIN 15
-#define LED_PIN        GPIO_NUM_2             // Onboard Blue LED
+#define SERVER_URL "http://192.168.0.105:5000/data"
 
-static const char *TAG = "IOT_FIRMWARE";
-static EventGroupHandle_t s_wifi_event_group;
-#define WIFI_CONNECTED_BIT BIT0
+static const char *TAG = "MAIN_APP";
+QueueHandle_t ai_queue;
 
-typedef struct {
-    float temp;
-    float hum;
-} dht_data_t;
+TaskHandle_t h_sensor_task = NULL;
+TaskHandle_t h_net_task = NULL;
 
-// ====================================================
-// DHT11 SENSOR DRIVER (MANUAL IMPLEMENTATION)
-// ====================================================
-int dht_read(dht_data_t *data) {
-    uint8_t bits[5] = {0};
-    uint8_t cnt = 7;
-    uint8_t idx = 0;
+void sensor_task(void *pvParameters) {
+  dht_init();
+  dht_reading_t raw_data;
+  inference_result_t analysis;
 
-    // 1. SEND START SIGNAL
-    gpio_set_direction(DHT_PIN, GPIO_MODE_OUTPUT);
-    gpio_set_level(DHT_PIN, 0);
-    ets_delay_us(20000); // Pull low for 20ms
-    gpio_set_level(DHT_PIN, 1);
-    ets_delay_us(40);
-    gpio_set_direction(DHT_PIN, GPIO_MODE_INPUT);
+  while (1) {
+    raw_data = dht_read_data();
 
-    // 2. WAIT FOR SENSOR RESPONSE
-    int timeout = 0;
-    while (gpio_get_level(DHT_PIN) == 0) {
-        if (timeout++ > 1000) return -1; // Timeout waiting for response
-        ets_delay_us(1);
-    }
-    timeout = 0;
-    while (gpio_get_level(DHT_PIN) == 1) {
-        if (timeout++ > 1000) return -1; // Timeout waiting for data
-        ets_delay_us(1);
-    }
+    if (raw_data.status == 0) {
 
-    // 3. READ 40 BITS OF DATA
-    for (int i = 0; i < 40; i++) {
-        timeout = 0;
-        while (gpio_get_level(DHT_PIN) == 0) {
-            if (timeout++ > 1000) return -1;
-            ets_delay_us(1);
-        }
+      analysis = analyze_environment(raw_data.temp, raw_data.hum);
 
-        ets_delay_us(28); // Wait to see if bit is 0 or 1
+      if (analysis.state == STATE_CRITICAL) {
+        ESP_LOGE(TAG, "ALERT: %s (Score: %d)", analysis.message,
+                 analysis.risk_score);
+      } else {
+        ESP_LOGI(TAG, "Environment: %s (Score: %d)", analysis.message,
+                 analysis.risk_score);
+      }
 
-        if (gpio_get_level(DHT_PIN)) {
-            bits[idx] |= (1 << cnt);
-            timeout = 0;
-            while (gpio_get_level(DHT_PIN) == 1) {
-                if (timeout++ > 1000) return -1;
-                ets_delay_us(1);
-            }
-        }
-        
-        if (cnt == 0) {
-            cnt = 7;
-            idx++;
-        } else {
-            cnt--;
-        }
-    }
-
-    // 4. VERIFY CHECKSUM
-    if ((bits[0] + bits[1] + bits[2] + bits[3]) == bits[4]) {
-        data->hum = bits[0];
-        data->temp = bits[2];
-        return 0; // Success
-    }
-    return -2; // Checksum Error
-}
-
-// ====================================================
-// WIFI & HTTP FUNCTIONS
-// ====================================================
-static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data) {
-    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
-        esp_wifi_connect();
-    } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
-        esp_wifi_connect();
-        xEventGroupClearBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
-        ESP_LOGW(TAG, "WiFi Disconnected. Retrying...");
-    } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
-        ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
-        ESP_LOGI(TAG, "WiFi Connected! IP: " IPSTR, IP2STR(&event->ip_info.ip));
-        xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
-    }
-}
-
-void wifi_init_sta(void) {
-    s_wifi_event_group = xEventGroupCreate();
-    ESP_ERROR_CHECK(esp_netif_init());
-    ESP_ERROR_CHECK(esp_event_loop_create_default());
-    esp_netif_create_default_wifi_sta();
-    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
-    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
-
-    esp_event_handler_instance_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &wifi_event_handler, NULL, NULL);
-    esp_event_handler_instance_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &wifi_event_handler, NULL, NULL);
-
-    wifi_config_t wifi_config = {
-        .sta = {
-            .ssid = WIFI_SSID,
-            .password = WIFI_PASS,
-        },
-    };
-    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
-    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
-    ESP_ERROR_CHECK(esp_wifi_start());
-}
-
-void send_data_to_backend(dht_data_t *data) {
-    char *post_data = NULL;
-    cJSON *root = cJSON_CreateObject();
-    
-    // Create JSON: {"temp": 25.0, "hum": 60.0, "accel_x": 0, "accel_y": 0}
-    cJSON_AddNumberToObject(root, "temp", data->temp);
-    cJSON_AddNumberToObject(root, "hum", data->hum);
-    cJSON_AddNumberToObject(root, "accel_x", 0); // Placeholder for now
-    cJSON_AddNumberToObject(root, "accel_y", 0); // Placeholder for now
-
-    post_data = cJSON_PrintUnformatted(root);
-    
-    esp_http_client_config_t config = {
-        .url = SERVER_URL,
-        .method = HTTP_METHOD_POST,
-        .timeout_ms = 5000,
-    };
-    esp_http_client_handle_t client = esp_http_client_init(&config);
-    esp_http_client_set_header(client, "Content-Type", "application/json");
-    esp_http_client_set_post_field(client, post_data, strlen(post_data));
-    
-    esp_err_t err = esp_http_client_perform(client);
-    if (err == ESP_OK) {
-        ESP_LOGI(TAG, "Data Sent! Temp: %.1f C | Hum: %.1f %%", data->temp, data->hum);
+      xQueueSend(ai_queue, &analysis, 0);
     } else {
-        ESP_LOGW(TAG, "HTTP Send Failed (Check Server IP)");
+      ESP_LOGW(TAG, "Sensor Read Error: %d", raw_data.status);
     }
 
-    esp_http_client_cleanup(client);
-    cJSON_Delete(root);
-    free(post_data);
+    vTaskDelay(pdMS_TO_TICKS(2000));
+  }
 }
 
-// ====================================================
-// MAIN APPLICATION LOOP
-// ====================================================
+void network_task(void *pvParameters) {
+  inference_result_t package;
+  char *post_buffer = NULL;
+
+  esp_http_client_config_t config = {
+      .url = SERVER_URL,
+      .method = HTTP_METHOD_POST,
+      .timeout_ms = 5000,
+  };
+  esp_http_client_handle_t client = esp_http_client_init(&config);
+
+  while (1) {
+    if (xQueueReceive(ai_queue, &package, portMAX_DELAY) == pdTRUE) {
+
+      cJSON *root = cJSON_CreateObject();
+      cJSON_AddNumberToObject(root, "temp", package.temp);
+      cJSON_AddNumberToObject(root, "hum", package.hum);
+
+      cJSON_AddNumberToObject(root, "risk_score", package.risk_score);
+      cJSON_AddStringToObject(root, "status_msg", package.message);
+      cJSON_AddNumberToObject(root, "alert_level", (int)package.state);
+
+      cJSON_AddNumberToObject(root, "free_heap", esp_get_free_heap_size());
+
+      post_buffer = cJSON_PrintUnformatted(root);
+
+      esp_http_client_set_header(client, "Content-Type", "application/json");
+      esp_http_client_set_post_field(client, post_buffer, strlen(post_buffer));
+
+      esp_err_t err = esp_http_client_perform(client);
+      if (err == ESP_OK) {
+        ESP_LOGI("NET", "Sent Payload (Size: %d)", strlen(post_buffer));
+      } else {
+        ESP_LOGW("NET", "Upload Failed: %s", esp_err_to_name(err));
+      }
+
+      cJSON_Delete(root);
+      free(post_buffer);
+    }
+  }
+}
+
+void monitor_task(void *pvParameters) {
+  while (1) {
+    ESP_LOGI("HEALTH", "Heap: %lu | Stack Sensor: %d | Stack Net: %d",
+             esp_get_free_heap_size(),
+             (int)uxTaskGetStackHighWaterMark(h_sensor_task),
+             (int)uxTaskGetStackHighWaterMark(h_net_task));
+    vTaskDelay(pdMS_TO_TICKS(10000));
+  }
+}
+
 void app_main(void) {
-    // 1. Initialize Storage & GPIO
-    esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-      ESP_ERROR_CHECK(nvs_flash_erase());
-      ret = nvs_flash_init();
-    }
-    ESP_ERROR_CHECK(ret);
+  nvs_flash_init();
 
-    gpio_reset_pin(LED_PIN);
-    gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
+  wifi_init_sta();
+  wifi_wait_for_connection();
 
-    // 2. Start WiFi
-    ESP_LOGI(TAG, "Starting WiFi...");
-    wifi_init_sta();
+  ai_queue = xQueueCreate(5, sizeof(inference_result_t));
 
-    // 3. Wait for Connection
-    xEventGroupWaitBits(s_wifi_event_group, WIFI_CONNECTED_BIT, pdFALSE, pdFALSE, portMAX_DELAY);
-
-    dht_data_t sensor_data = {0};
-
-    // 4. Main Loop
-    while (1) {
-        // Read Sensor (Try reading on GPIO 15)
-        if (dht_read(&sensor_data) == 0) {
-            gpio_set_level(LED_PIN, 1); // Blink LED on success
-            send_data_to_backend(&sensor_data);
-            gpio_set_level(LED_PIN, 0);
-        } else {
-            ESP_LOGE(TAG, "DHT Read Failed! Check wire on GPIO 15 (P15)");
-        }
-
-        // Wait 2 seconds
-        vTaskDelay(2000 / portTICK_PERIOD_MS);
-    }
+  xTaskCreate(sensor_task, "AI_Sensor", 4096, NULL, 5, &h_sensor_task);
+  xTaskCreate(network_task, "Network", 4096, NULL, 4, &h_net_task);
+  xTaskCreate(monitor_task, "Monitor", 2048, NULL, 1, NULL);
 }
