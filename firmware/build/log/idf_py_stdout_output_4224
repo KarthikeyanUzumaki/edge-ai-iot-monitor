@@ -1877,4 +1877,148 @@ entry 0x40080644
 [0;32mI (1564069) MAIN_APP: Env: Nominal (State: 0)[0m
 [0;32mI (1565089) MAIN_APP: Env: Nominal (State: 0)[0m
 [0;32mI (1566109) MAIN_APP: Env: Nominal (State: 0)[0m
-[0;32mI (1567129) MAIN
+[0;32mI (1567129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1568149) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1569169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1570189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1571209) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1572229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1572459) HEALTH: Heap: 217080[0m
+[0;32mI (1573249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1574269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1575289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1576309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1577329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1578349) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1579369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1580389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1581409) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1582429) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1582459) HEALTH: Heap: 217080[0m
+[0;32mI (1583449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1584469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1585489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1586509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1587529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1588549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1589569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1590589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1591609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1592459) HEALTH: Heap: 217080[0m
+[0;32mI (1592629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1593649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1594669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1595689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1596709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1597729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1598749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1599769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1600789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1601809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1602459) HEALTH: Heap: 217080[0m
+[0;32mI (1602829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1603849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1604869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1605889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1606909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1607929) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1608949) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1609969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1610989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1612009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1612459) HEALTH: Heap: 217080[0m
+[0;32mI (1613029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1614049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1615069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1616089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1617109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1618129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1619149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1620169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1621189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1622209) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1622459) HEALTH: Heap: 213244[0m
+[0;32mI (1623229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1624249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1625269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1626289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1627309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1628329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1629349) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1630369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1631389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1632409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1632459) HEALTH: Heap: 213244[0m
+[0;33mW (1633429) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1634449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1635469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1636489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1637509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1638529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1639549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1640569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1641589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1642459) HEALTH: Heap: 217080[0m
+[0;32mI (1642609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1643629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1644649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1645669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1646689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1647709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1648729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1649749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1650769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1651789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1652459) HEALTH: Heap: 217080[0m
+[0;32mI (1652809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1653829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1654849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1655869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1656889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1657909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1658929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1659949) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1660969) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1661989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1662459) HEALTH: Heap: 217080[0m
+[0;32mI (1663009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1664029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1665049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1666069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1667089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1668109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1669129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1670149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1671169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1672189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1672459) HEALTH: Heap: 217080[0m
+[0;32mI (1673209) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1674229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1675249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1676269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1677289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1678309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1679329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1680349) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1681369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1682389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1682459) HEALTH: Heap: 213244[0m
+[0;32mI (1683409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1684429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1685449) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1686469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1687489) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1688509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1689529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1690549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1691569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1692459) HEALTH: Heap: 213244[0m
+[0;32mI (1692589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1693609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1694629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1695649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1696669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1697689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1698709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1699729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1700749) MAIN_APP: Env: Nominal (State: 0)
