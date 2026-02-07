@@ -1,0 +1,405 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\iot_monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\edge-ai-iot-monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py' '-p' 'COM5'
+et$T�H(
+B��J��ѹe�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f6c8h (128712) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002f6f0 vaddr=3ffb0000 size=00928h (  2344) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a2c2ch (666668) map[0m
+[0;32mI (363) esp_image: segment 3: paddr=000d2c54 vaddr=3ffb0928 size=0363ch ( 13884) load[0m
+[0;32mI (369) esp_image: segment 4: paddr=000d6298 vaddr=40080000 size=192e8h (103144) load[0m
+[0;32mI (409) esp_image: segment 5: paddr=000ef588 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (422) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (422) boot: Disabling RNG early entropy source...[0m
+[0;32mI (432) cpu_start: Multicore app[0m
+[0;32mI (440) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (441) cpu_start: Pro cpu start user code[0m
+[0;32mI (441) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (446) app_init: Project name:     iot_monitor[0m
+[0;32mI (451) app_init: App version:      6498c78-dirty[0m
+[0;32mI (455) app_init: Compile time:     Feb  7 2026 11:10:28[0m
+[0;32mI (460) app_init: ELF file SHA256:  7973913e4...[0m
+[0;32mI (464) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (470) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (474) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (478) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (482) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (488) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (493) heap_init: At 3FFB8878 len 00027788 (157 KiB): DRAM[0m
+[0;32mI (498) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (504) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 400992E8 len 00006D18 (27 KiB): IRAM[0m
+[0;33mW (516) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (527) spi_flash: detected chip: generic[0m
+[0;32mI (531) spi_flash: flash io: dio[0m
+[0;33mW (534) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (546) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (557) main_task: Started on CPU0[0m
+[0;32mI (567) main_task: Calling app_main()[0m
+[0;32mI (587) IOT_FIRMWARE: Scanning I2C bus...[0m
+[1;31mE (617) IOT_FIRMWARE: No I2C devices found! Check wiring.[0m
+[0;32mI (617) IOT_FIRMWARE: MPU6050 Woken Up[0m
+[0;32mI (627) wifi:wifi driver task: 3ffc0a3c, prio:23, stack:6656, core=0[0m
+[0;32mI (637) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (637) wifi:wifi certification version: v7.0[0m
+[0;32mI (637) wifi:config NVS flash: enabled[0m
+[0;32mI (637) wifi:config nano formatting: disabled[0m
+[0;32mI (637) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (647) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (647) wifi:Init management short buffer num: 32[0m
+[0;32mI (657) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (657) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (667) wifi:Init static rx buffer num: 10[0m
+[0;32mI (667) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (667) wifi_init: rx ba win: 6[0m
+[0;32mI (677) wifi_init: accept mbox: 6[0m
+[0;32mI (677) wifi_init: tcpip mbox: 32[0m
+[0;32mI (677) wifi_init: udp mbox: 6[0m
+[0;32mI (677) wifi_init: tcp mbox: 6[0m
+[0;32mI (687) wifi_init: tcp tx win: 5760[0m
+[0;32mI (687) wifi_init: tcp rx win: 5760[0m
+[0;32mI (687) wifi_init: tcp mss: 1440[0m
+[0;32mI (697) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (697) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (707) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (707) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (797) wifi:mode : sta (28:56:2f:77:a4:9c)[0m
+[0;32mI (797) wifi:enable tsf[0m
+[0;32mI (807) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (817) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (817) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (827) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (937) wifi:connected with ACT_0E41_5G, aid = 4, channel 10, BW20, bssid = b2:19:21:aa:0e:41[0m
+[0;32mI (937) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (947) wifi:pm start, type: 1[0m
+
+[0;32mI (947) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (967) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (967) wifi:<ba-add>idx:0 (ifx:0, b2:19:21:aa:0e:41), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2477) esp_netif_handlers: sta ip: 192.168.0.106, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2477) IOT_FIRMWARE: Connected! IP: 192.168.0.106[0m
+[1;31mE (2477) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (3137) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (5137) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (5667) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.9000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (7667) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (7747) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.799999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (9747) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (10497) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (12497) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (14587) IOT_FIRMWARE: Data Sent: {"temp":25.600000381469727,"hum":60.9000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (16597) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (17157) IOT_FIRMWARE: Data Sent: {"temp":25.100000381469727,"hum":60.0999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (19157) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (19917) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.5,"accel_x":0,"accel_y":0}[0m
+[1;31mE (21917) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (22577) IOT_FIRMWARE: Data Sent: {"temp":25.799999237060547,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (24587) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (26677) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (28687) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (29367) IOT_FIRMWARE: Data Sent: {"temp":25.899999618530273,"hum":60.200000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (31377) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (32137) IOT_FIRMWARE: Data Sent: {"temp":25.700000762939453,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (34137) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (34907) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.799999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (36907) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (37337) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (39347) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (40197) IOT_FIRMWARE: Data Sent: {"temp":25.899999618530273,"hum":60.200000762939453,"accel_x":0,"accel_y":0}[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x40081849[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x400991cc[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f6c8h (128712) map[0m
+[0;32mI (174) esp_image: segment 1: paddr=0002f6f0 vaddr=3ffb0000 size=00928h (  2344) load[0m
+[0;32mI (175) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a2c2ch (666668) map[0m
+[0;32mI (405) esp_image: segment 3: paddr=000d2c54 vaddr=3ffb0928 size=0363ch ( 13884) load[0m
+[0;32mI (411) esp_image: segment 4: paddr=000d6298 vaddr=40080000 size=192e8h (103144) load[0m
+[0;32mI (451) esp_image: segment 5: paddr=000ef588 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (463) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (463) boot: Disabling RNG early entropy source...[0m
+[0;32mI (474) cpu_start: Multicore app[0m
+[0;32mI (482) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (482) cpu_start: Pro cpu start user code[0m
+[0;32mI (483) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (484) app_init: Application information:[0m
+[0;32mI (488) app_init: Project name:     iot_monitor[0m
+[0;32mI (492) app_init: App version:      6498c78-dirty[0m
+[0;32mI (497) app_init: Compile time:     Feb  7 2026 11:10:28[0m
+[0;32mI (502) app_init: ELF file SHA256:  7973913e4...[0m
+[0;32mI (506) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (512) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (515) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (519) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (524) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (530) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (535) heap_init: At 3FFB8878 len 00027788 (157 KiB): DRAM[0m
+[0;32mI (540) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (545) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (551) heap_init: At 400992E8 len 00006D18 (27 KiB): IRAM[0m
+[0;33mW (557) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (569) spi_flash: detected chip: generic[0m
+[0;32mI (573) spi_flash: flash io: dio[0m
+[0;33mW (576) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (588) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (599) main_task: Started on CPU0[0m
+[0;32mI (609) main_task: Calling app_main()[0m
+[0;32mI (629) IOT_FIRMWARE: Scanning I2C bus...[0m
+[1;31mE (1889) IOT_FIRMWARE: No I2C devices found! Check wiring.[0m
+[0;32mI (2889) IOT_FIRMWARE: MPU6050 Woken Up[0m
+[0;32mI (2899) wifi:wifi driver task: 3ffc0a3c, prio:23, stack:6656, core=0[0m
+[0;32mI (2909) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (2909) wifi:wifi certification version: v7.0[0m
+[0;32mI (2909) wifi:config NVS flash: enabled[0m
+[0;32mI (2909) wifi:config nano formatting: disabled[0m
+[0;32mI (2909) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2919) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2919) wifi:Init management short buffer num: 32[0m
+[0;32mI (2929) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2929) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2939) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2939) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2949) wifi_init: rx ba win: 6[0m
+[0;32mI (2949) wifi_init: accept mbox: 6[0m
+[0;32mI (2949) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2949) wifi_init: udp mbox: 6[0m
+[0;32mI (2959) wifi_init: tcp mbox: 6[0m
+[0;32mI (2959) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2959) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2969) wifi_init: tcp mss: 1440[0m
+[0;32mI (2969) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2969) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (2979) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (2989) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (3069) wifi:mode : sta (28:56:2f:77:a4:9c)[0m
+[0;32mI (3069) wifi:enable tsf[0m
+[0;32mI (3089) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3089) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3099) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3109) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3219) wifi:connected with ACT_0E41_5G, aid = 4, channel 10, BW20, bssid = b2:19:21:aa:0e:41[0m
+[0;32mI (3219) wifi:security: WPA2-PSK, phy: bgn, rssi: -88[0m
+[0;32mI (3219) wifi:pm start, type: 1[0m
+
+[0;32mI (3219) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3229) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3249) wifi:<ba-add>idx:0 (ifx:0, b2:19:21:aa:0e:41), tid:0, ssn:3, winSize:64[0m
+[0;32mI (4759) esp_netif_handlers: sta ip: 192.168.0.106, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (4759) IOT_FIRMWARE: Connected! IP: 192.168.0.106[0m
+[1;31mE (5759) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (6509) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (9509) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (10019) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.9000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (12029) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (12859) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.799999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (15859) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (16549) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (19549) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (20129) IOT_FIRMWARE: Data Sent: {"temp":25.600000381469727,"hum":60.9000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (23129) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (25529) IOT_FIRMWARE: Data Sent: {"temp":25.100000381469727,"hum":60.0999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (28529) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (29149) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.5,"accel_x":0,"accel_y":0}[0m
+[1;31mE (31149) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (31909) IOT_FIRMWARE: Data Sent: {"temp":25.799999237060547,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (33909) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (34369) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (36369) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (36519) IOT_FIRMWARE: Data Sent: {"temp":25.899999618530273,"hum":60.200000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (38529) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (39219) IOT_FIRMWARE: Data Sent: {"temp":25.700000762939453,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (41229) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (41659) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.799999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (43659) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (44429) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (46439) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (47269) IOT_FIRMWARE: Data Sent: {"temp":25.899999618530273,"hum":60.200000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (49269) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (50029) IOT_FIRMWARE: Data Sent: {"temp":25.399999618530273,"hum":60.9000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (52029) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (52799) IOT_FIRMWARE: Data Sent: {"temp":25.100000381469727,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (54799) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (54949) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.4000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (56959) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (57709) IOT_FIRMWARE: Data Sent: {"temp":25.5,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (59709) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (60269) IOT_FIRMWARE: Data Sent: {"temp":25.399999618530273,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (62279) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (62939) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.4000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (64939) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (65029) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.0999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (67029) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (67459) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (69459) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (69539) IOT_FIRMWARE: Data Sent: {"temp":25.600000381469727,"hum":60.0999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (71549) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (72179) IOT_FIRMWARE: Data Sent: {"temp":25.899999618530273,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (74189) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (74649) IOT_FIRMWARE: Data Sent: {"temp":25.5,"hum":60.0999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (76659) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (77579) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.4000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (79579) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (80439) IOT_FIRMWARE: Data Sent: {"temp":25.399999618530273,"hum":60.5,"accel_x":0,"accel_y":0}[0m
+[1;31mE (82449) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (82899) IOT_FIRMWARE: Data Sent: {"temp":25.899999618530273,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (84899) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (85779) IOT_FIRMWARE: Data Sent: {"temp":25.700000762939453,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (87789) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (88039) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.4000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (90039) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (90299) IOT_FIRMWARE: Data Sent: {"temp":25.399999618530273,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (92309) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (92669) IOT_FIRMWARE: Data Sent: {"temp":25.899999618530273,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (94679) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (94769) IOT_FIRMWARE: Data Sent: {"temp":25.600000381469727,"hum":60.200000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (96769) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (97199) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (99199) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (100309) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.9000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (102309) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (103999) IOT_FIRMWARE: Data Sent: {"temp":25.899999618530273,"hum":60.5,"accel_x":0,"accel_y":0}[0m
+[1;31mE (105999) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (106079) IOT_FIRMWARE: Data Sent: {"temp":25.5,"hum":60.9000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (108079) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (108809) IOT_FIRMWARE: Data Sent: {"temp":25.700000762939453,"hum":60.9000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (110809) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (111269) IOT_FIRMWARE: Data Sent: {"temp":25.700000762939453,"hum":60.4000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (113269) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (113719) IOT_FIRMWARE: Data Sent: {"temp":25.600000381469727,"hum":60.9000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (115729) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (116079) IOT_FIRMWARE: Data Sent: {"temp":25.600000381469727,"hum":60.4000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (118089) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (118739) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.5,"accel_x":0,"accel_y":0}[0m
+[1;31mE (120749) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (121099) IOT_FIRMWARE: Data Sent: {"temp":25.700000762939453,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (123109) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (123759) IOT_FIRMWARE: Data Sent: {"temp":25.899999618530273,"hum":60.4000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (125769) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (126529) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.5,"accel_x":0,"accel_y":0}[0m
+[1;31mE (128529) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (129289) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.799999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (131299) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (131749) IOT_FIRMWARE: Data Sent: {"temp":25.100000381469727,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (133749) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (134209) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (136209) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (137069) IOT_FIRMWARE: Data Sent: {"temp":25.5,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (139079) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (139439) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.0999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (141439) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (141899) IOT_FIRMWARE: Data Sent: {"temp":25.700000762939453,"hum":60.200000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (143909) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (144549) IOT_FIRMWARE: Data Sent: {"temp":25.600000381469727,"hum":60.799999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (146549) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (147959) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.0999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (149959) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (150699) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (152699) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (153349) IOT_FIRMWARE: Data Sent: {"temp":25.799999237060547,"hum":60.0999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (155359) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (155919) IOT_FIRMWARE: Data Sent: {"temp":25.100000381469727,"hum":60.4000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (157919) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (158369) IOT_FIRMWARE: Data Sent: {"temp":25.700000762939453,"hum":60.4000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (160379) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (160829) IOT_FIRMWARE: Data Sent: {"temp":25.700000762939453,"hum":60.5,"accel_x":0,"accel_y":0}[0m
+[1;31mE (162839) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (163599) IOT_FIRMWARE: Data Sent: {"temp":25.799999237060547,"hum":60.0999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (165599) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (167589) IOT_FIRMWARE: Data Sent: {"temp":25.799999237060547,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (169599) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (170349) IOT_FIRMWARE: Data Sent: {"temp":25.100000381469727,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (172359) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (174369) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.9000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (176369) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (177209) IOT_FIRMWARE: Data Sent: {"temp":25.5,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (179219) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (179979) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (181979) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (182749) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.4000015258789,"accel_x":0,"accel_y":0}[0m
+[1;31mE (184749) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (185199) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (187199) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (187279) IOT_FIRMWARE: Data Sent: {"temp":25.100000381469727,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (189279) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (189709) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (191709) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (192569) IOT_FIRMWARE: Data Sent: {"temp":25.799999237060547,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (194579) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (195159) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (197169) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (197409) IOT_FIRMWARE: Data Sent: {"temp":25.799999237060547,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (199409) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (200689) IOT_FIRMWARE: Data Sent: {"temp":25.799999237060547,"hum":60.799999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (202689) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (203939) IOT_FIRMWARE: Data Sent: {"temp":25.5,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (205939) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (207119) IOT_FIRMWARE: Data Sent: {"temp":25.799999237060547,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (209129) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (209679) IOT_FIRMWARE: Data Sent: {"temp":25.100000381469727,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (211679) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (212339) IOT_FIRMWARE: Data Sent: {"temp":25.700000762939453,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (214339) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (214899) IOT_FIRMWARE: Data Sent: {"temp":25.899999618530273,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (216899) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (217459) IOT_FIRMWARE: Data Sent: {"temp":25.799999237060547,"hum":60.299999237060547,"accel_x":0,"accel_y":0}[0m
+[1;31mE (219459) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (219919) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (221919) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (222579) IOT_FIRMWARE: Data Sent: {"temp":25.399999618530273,"hum":60.5,"accel_x":0,"accel_y":0}[0m
+[1;31mE (224589) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (225029) IOT_FIRMWARE: Data Sent: {"temp":25.299999237060547,"hum":60.200000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (227039) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (227229) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.700000762939453,"accel_x":0,"accel_y":0}[0m
+[1;31mE (229229) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (229989) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (231989) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (232609) IOT_FIRMWARE: Data Sent: {"temp":25.5,"hum":60,"accel_x":0,"accel_y":0}[0m
+[1;31mE (234619) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (234699) IOT_FIRMWARE: Data Sent: {"temp":25,"hum":60.5999984741211,"accel_x":0,"accel_y":0}[0m
+[1;31mE (236709) IOT_FIRMWARE: MPU6050 Read Failed[0m
+[0;32mI (237529) IOT_FIRMWARE: Data Sent: {"temp":25.200000762939453,"hum":60.5,"accel_x":0,"accel_y":0}[0m

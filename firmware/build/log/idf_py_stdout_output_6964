@@ -1,0 +1,1079 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\edge-ai-iot-monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py' '-p' 'COM5' '-b' '115200'
+R�H(
+B��J��ѹesp32: SPI Flash Size :�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a84h ( 39556) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=00019aac vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001beb4 vaddr=40080000 size=04164h ( 16740) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f6f0h ( 63216) map[0m
+[0;32mI (134) esp_image: segment 4: paddr=0002f718 vaddr=40084164 size=08ea0h ( 36512) load[0m
+[0;32mI (149) esp_image: segment 5: paddr=000385c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (156) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (156) boot: Disabling RNG early entropy source...[0m
+[0;32mI (167) cpu_start: Multicore app[0m
+[0;32mI (175) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (175) cpu_start: Pro cpu start user code[0m
+[0;32mI (175) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (177) app_init: Application information:[0m
+[0;32mI (181) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (186) app_init: App version:      6498c78-dirty[0m
+[0;32mI (190) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (195) app_init: ELF file SHA256:  73684b948...[0m
+[0;32mI (200) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (205) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (209) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (213) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (217) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (223) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (228) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (239) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (244) heap_init: At 4008D004 len 00012FFC (75 KiB): IRAM[0m
+[0;33mW (251) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (263) spi_flash: detected chip: generic[0m
+[0;32mI (266) spi_flash: flash io: dio[0m
+[0;33mW (269) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (282) main_task: Started on CPU0[0m
+[0;32mI (292) main_task: Calling app_main()[0m
+[0;32mI (312) SENSOR_STABILITY: SUCCESS | Temp: 30.0 | Hum: 60.0 | Fail Rate: 0.0%[0m
+[0;33mW (2332) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (2452) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (2572) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (2672) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (4692) SENSOR_STABILITY: Retry 1/3...[0m
+W (4812) SENSOR_STABILITY: Retry 2/3...
+[0;33mW (4932) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (5032) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (7052) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (7172) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (7292) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (7392) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (9412) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (9532) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (9652) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (9752) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (11772) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (11892) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (12012) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (12112) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (14132) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (14252) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (14372) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (14472) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (16492) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (16612) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (16732) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (16832) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (18852) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (18972) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (19092) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (19192) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (21212) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (21332) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (21452) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (21552) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (23572) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (23692) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (23812) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (23912) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (25932) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (26052) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (26172) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (26272) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (28292) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (28412) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (28532) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (28632) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (30652) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (30772) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (30892) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (30992) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (33012) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (33132) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (33252) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (33352) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (35372) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (35492) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (35612) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (35712) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (37732) SENSOR_STABILITY: Retry 1/3...[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x70257030,len:1952801824
+1150 mmu set 00010000, pos 00010000
+1150 mmu set 00020000, pos 00020000
+1150 mmu set 00030000, pos 00030000
+1150 mmu set 00040000, pos 00040000
+1150 mmu set 00050000, pos 00050000
+1150 mmu set 00060000, pos 00060000
+1150 mmu set 00070000, pos 00070000
+1150 mmu set 00080000, pos 00080000
+1150 mmu set 00090000, pos 00090000
+1150 mmu set 000a0000, pos 000a0000
+1150 mmu set 000b0000, pos 000b0000
+1150 mmu set 000c0000, pos 000c0000
+1150 mmu set 000d0000, pos 000d0000
+1150 mmu set 000e0000, pos 000e0000
+1150 mmu set 000f0000, pos 000f0000
+1150 mmu set 00100000, pos 00100000
+1150 mmu set 00110000, pos 00110000
+1150 mmu set 00120000, pos 00120000
+1150 mmu set 00130000, pos 00130000
+1150 mmu set 00140000, pos 00140000
+1150 mmu set 00150000, pos 00150000
+1150 mmu set 00160000, pos 00160000
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x40081532[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x40082604[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a84h ( 39556) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00019aac vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0001beb4 vaddr=40080000 size=04164h ( 16740) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f6f0h ( 63216) map[0m
+[0;32mI (176) esp_image: segment 4: paddr=0002f718 vaddr=40084164 size=08ea0h ( 36512) load[0m
+[0;32mI (191) esp_image: segment 5: paddr=000385c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (197) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (197) boot: Disabling RNG early entropy source...[0m
+[0;32mI (209) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (217) cpu_start: Pro cpu start user code[0m
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (219) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (228) app_init: App version:      6498c78-dirty[0m
+[0;32mI (232) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (237) app_init: ELF file SHA256:  73684b948...[0m
+[0;32mI (242) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (247) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (251) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (255) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008D004 len 00012FFC (75 KiB): IRAM[0m
+[0;33mW (293) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (305) spi_flash: detected chip: generic[0m
+[0;32mI (308) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+[0;32mI (354) SENSOR_STABILITY: SUCCESS | Temp: 29.0 | Hum: 65.0 | Fail Rate: 0.0%[0m
+[0;33mW (2374) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (2494) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (2614) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (2714) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (4734) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (4854) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (4974) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (5074) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (7094) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (7214) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (7334) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (7434) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (9454) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (9574) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (9694) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (9794) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (11814) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (11934) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (12054) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (12154) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (14174) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (14294) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (14414) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (14514) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (16534) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (16654) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (16774) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (16874) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (18894) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (19014) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (19134) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (19234) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (21254) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (21374) SENSOR_STABILITY: Retry 2/3...[0m
+W (21494) SENSOR_STABILITY: Retry 3/3...
+[1;31mE (21594) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (23614) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (23734) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (23854) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (23954) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (25974) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (26094) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (26214) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (26314) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (28334) SENSOR_STABILITY: Retry 1/3...[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x4008cee8[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x4008cee8[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a84h ( 39556) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00019aac vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0001beb4 vaddr=40080000 size=04164h ( 16740) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f6f0h ( 63216) map[0m
+[0;32mI (176) esp_image: segment 4: paddr=0002f718 vaddr=40084164 size=08ea0h ( 36512) load[0m
+[0;32mI (191) esp_image: segment 5: paddr=000385c0 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (191) esp_image: Checksum failed. Calculated 0x92 read 0x0[0m
+[1;31mE (192) boot: Factory app partition is not bootable[0m
+[1;31mE (197) boot: No bootable app partitions in the partition table[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0xffffffff,len:-1
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x40079b89[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x4008cee8[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a84h ( 39556) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00019aac vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0001beb4 vaddr=40080000 size=04164h ( 16740) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f6f0h ( 63216) map[0m
+[0;32mI (176) esp_image: segment 4: paddr=0002f718 vaddr=40084164 size=08ea0h ( 36512) load[0m
+[0;32mI (191) esp_image: segment 5: paddr=000385c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (197) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (197) boot: Disabling RNG early entropy source...[0m
+[0;32mI (209) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (217) cpu_start: Pro cpu start user code[0m
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (219) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (228) app_init: App version:      6498c78-dirty[0m
+[0;32mI (232) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (237) app_init: ELF file SHA256:  73684b948...[0m
+[0;32mI (242) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (247) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (251) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (255) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008D004 len 00012FFC (75 KiB): IRAM[0m
+[0;33mW (293) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (305) spi_flash: detected chip: generic[0m
+[0;32mI (308) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+[0;32mI (354) SENSOR_STABILITY: SUCCESS | Temp: 31.0 | Hum: 62.0 | Fail Rate: 0.0%[0m
+[0;33mW (2374) SENSOR_STABILITY: Retry 1/3...[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x4008cee8[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x4008cee8[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a84h ( 39556) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00019aac vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0001beb4 vaddr=40080000 size=04164h ( 16740) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f6f0h ( 63216) map[0m
+[0;32mI (176) esp_image: segment 4: paddr=0002f718 vaddr=40084164 size=08ea0h ( 36512) load[0m
+[0;32mI (191) esp_image: segment 5: paddr=000385c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (197) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (197) boot: Disabling RNG early entropy source...[0m
+[0;32mI (209) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (217) cpu_start: Pro cpu start user code[0m
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (219) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (228) app_init: App version:      6498c78-dirty[0m
+[0;32mI (232) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (237) app_init: ELF file SHA256:  73684b948...[0m
+[0;32mI (242) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (247) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (251) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (255) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008D004 len 00012FFC (75 KiB): IRAM[0m
+[0;33mW (293) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (305) spi_flash: detected chip: generic[0m
+[0;32mI (308) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+[0;32mI (354) SENSOR_STABILITY: SUCCESS | Temp: 29.0 | Hum: 64.0 | Fail Rate: 0.0%[0m
+[0;33mW (2374) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (2494) SENSOR_STABILITY: Retry 2/3...[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x40081532[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x40082640[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a84h ( 39556) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00019aac vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0001beb4 vaddr=40080000 size=04164h ( 16740) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f6f0h ( 63216) map[0m
+[0;32mI (176) esp_image: segment 4: paddr=0002f718 vaddr=40084164 size=08ea0h ( 36512) load[0m
+[0;32mI (191) esp_image: segment 5: paddr=000385c0 vaddr=50000000 size=00020h (    32) load[0m
+[1;31mE (191) esp_image: Checksum failed. Calculated 0xc2 read 0x0[0m
+[1;31mE (192) boot: Factory app partition is not bootable[0m
+[1;31mE (197) boot: No bootable app partitions in the partition table[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 988
+ets_main.c 384 
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0xffffffff,len:-1
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0xffffffff,len:-1
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0xffffffff,len:-1
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (416) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (416) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (416) boot: Multicore bootloader[0m
+[0;32mI (420) boot: chip revision: v3.1[0m
+[0;32mI (423) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (427) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (431) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (434) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (439) boot.esp32: WDT rst info: PRO CPU PC=0x40079b89[0m
+[0;33mW (444) boot.esp32: WDT rst info: APP CPU PC=0x40082640[0m
+[0;32mI (449) boot: Enabling RNG early entropy source...[0m
+[1;31mE (453) flash_parts: partition 0 invalid magic number 0xffff[0m
+[1;31mE (458) boot: Failed to verify partition table[0m
+[1;31mE (463) boot: load partition table error![0m
+ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (183) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (183) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (183) boot: Multicore bootloader[0m
+[0;32mI (187) boot: chip revision: v3.1[0m
+[0;32mI (190) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (194) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (198) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (201) boot: Enabling RNG early entropy source...[0m
+[0;32mI (206) boot: Partition Table:[0m
+[0;32mI (209) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (215) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (222) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (228) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (235) boot: End of partition table[0m
+[1;31mE (238) esp_image: image at 0x10000 has invalid magic byte (nothing flashed here?)[0m
+[1;31mE (245) boot: Factory app partition is not bootable[0m
+[1;31mE (250) boot: No bootable app partitions in the partition table[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+csum err:0x3d!=0xff
+ets_main.c 384 
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x40079b89[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x40082640[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a84h ( 39556) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00019aac vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0001beb4 vaddr=40080000 size=04164h ( 16740) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f6f0h ( 63216) map[0m
+[0;32mI (176) esp_image: segment 4: paddr=0002f718 vaddr=40084164 size=08ea0h ( 36512) load[0m
+[0;32mI (191) esp_image: segment 5: paddr=000385c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (197) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (197) boot: Disabling RNG early entropy source...[0m
+[0;32mI (209) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (217) cpu_start: Pro cpu start user code[0m
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (219) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (228) app_init: App version:      6498c78-dirty[0m
+[0;32mI (232) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (237) app_init: ELF file SHA256:  73684b948...[0m
+[0;32mI (242) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (247) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (251) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (255) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008D004 len 00012FFC (75 KiB): IRAM[0m
+[0;33mW (293) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (305) spi_flash: detected chip: generic[0m
+[0;32mI (308) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+[0;32mI (354) SENSOR_STABILITY: SUCCESS | Temp: 30.0 | Hum: 64.0 | Fail Rate: 0.0%[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 988
+ets_main.c 384 
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x20800020,len:4096
+load:0xffffffff,len:-1
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0xffffffff,len:-1
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x40081532[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x4008cf0b[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a84h ( 39556) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00019aac vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0001beb4 vaddr=40080000 size=04164h ( 16740) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f6f0h ( 63216) map[0m
+[0;32mI (176) esp_image: segment 4: paddr=0002f718 vaddr=40084164 size=08ea0h ( 36512) load[0m
+[0;32mI (191) esp_image: segment 5: paddr=000385c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (197) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (197) boot: Disabling RNG early entropy source...[0m
+[0;32mI (209) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (217) cpu_start: Pro cpu start user code[0m
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (219) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (228) app_init: App version:      6498c78-dirty[0m
+[0;32mI (232) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (237) app_init: ELF file SHA256:  73684b948...[0m
+[0;32mI (242) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (247) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (251) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (255) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008D004 len 00012FFC (75 KiB): IRAM[0m
+[0;33mW (293) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (305) spi_flash: detected chip: generic[0m
+[0;32mI (308) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+[0;32mI (354) SENSOR_STABILITY: SUCCESS | Temp: 30.0 | Hum: 60.0 | Fail Rate: 0.0%[0m
+[0;33mW (2374) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (2494) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (2614) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (2714) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (4734) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (4854) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (4974) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (5074) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (7094) SENSOR_STABILITY: Retry 1/3...[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 988
+ets_main.c 384 
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 988
+ets_main.c 384 
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 988
+ets_main.c 384 
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 988
+ets_main.c 384 
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 988
+ets_main.c 384 
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x40081532[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x40081532[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a84h ( 39556) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00019aac vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0001beb4 vaddr=40080000 size=04164h ( 16740) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f6f0h ( 63216) map[0m
+[0;32mI (176) esp_image: segment 4: paddr=0002f718 vaddr=40084164 size=08ea0h ( 36512) load[0m
+[0;32mI (191) esp_image: segment 5: paddr=000385c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (197) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (197) boot: Disabling RNG early entropy source...[0m
+[0;32mI (209) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (217) cpu_start: Pro cpu start user code[0m
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (219) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (228) app_init: App version:      6498c78-dirty[0m
+[0;32mI (232) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (237) app_init: ELF file SHA256:  73684b948...[0m
+[0;32mI (242) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (247) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (251) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (255) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008D004 len 00012FFC (75 KiB): IRAM[0m
+[0;33mW (293) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (305) spi_flash: detected chip: generic[0m
+[0;32mI (308) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+[0;32mI (354) SENSOR_STABILITY: SUCCESS | Temp: 27.0 | Hum: 63.0 | Fail Rate: 0.0%[0m
+[0;33mW (2374) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (2494) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (2614) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (2714) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (4734) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (4854) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (4974) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (5074) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (7094) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (7214) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (7334) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (7434) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (9454) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (9574) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (9694) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (9794) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (11814) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (11934) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (12054) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (12154) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (14174) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (14294) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (14414) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (14514) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (16534) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (16654) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (16774) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (16874) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (18894) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (19014) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (19134) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (19234) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (21254) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (21374) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (21494) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (21594) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (23614) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (23734) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (23854) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (23954) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (25974) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (26094) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (26214) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (26314) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (28334) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (28454) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (28574) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (28674) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (30694) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (30814) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (30934) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (31034) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (33054) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (33174) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (33294) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (33394) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (35414) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (35534) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (35654) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (35754) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (37774) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (37894) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (38014) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (38114) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (40134) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (40254) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (40374) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (40474) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (42494) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (42614) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (42734) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (42834) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+invalid header: 0x00000000
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+invalid header: 0x00000000
+invalid header: 0x00000000
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x00000000,len:0
+load:0x00000050,len:1
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x40081532[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x40081532[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a84h ( 39556) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00019aac vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0001beb4 vaddr=40080000 size=04164h ( 16740) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f6f0h ( 63216) map[0m
+[0;32mI (176) esp_image: segment 4: paddr=0002f718 vaddr=40084164 size=08ea0h ( 36512) load[0m
+[0;32mI (191) esp_image: segment 5: paddr=000385c0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (197) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (197) boot: Disabling RNG early entropy source...[0m
+[0;32mI (209) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (217) cpu_start: Pro cpu start user code[0m
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (219) app_init: Application information:[0m
+[0;32mI (223) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (228) app_init: App version:      6498c78-dirty[0m
+[0;32mI (232) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (237) app_init: ELF file SHA256:  73684b948...[0m
+[0;32mI (242) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (247) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (251) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (255) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2CD0 len 0002D330 (180 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008D004 len 00012FFC (75 KiB): IRAM[0m
+[0;33mW (293) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (305) spi_flash: detected chip: generic[0m
+[0;32mI (308) spi_flash: flash io: dio[0m
+[0;33mW (311) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+[0;32mI (354) SENSOR_STABILITY: SUCCESS | Temp: 27.0 | Hum: 65.0 | Fail Rate: 0.0%[0m
+[0;33mW (2374) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (2494) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (2614) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (2714) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (4734) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (4854) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (4974) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (5074) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m
+[0;33mW (7094) SENSOR_STABILITY: Retry 1/3...[0m
+[0;33mW (7214) SENSOR_STABILITY: Retry 2/3...[0m
+[0;33mW (7334) SENSOR_STABILITY: Retry 3/3...[0m
+[1;31mE (7434) SENSOR_STABILITY: CRITICAL: Sensor Unresponsive after 3 retries[0m

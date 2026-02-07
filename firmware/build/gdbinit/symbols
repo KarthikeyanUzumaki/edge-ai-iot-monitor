@@ -22,4 +22,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/edge-ai-iot-monitor.elf
+file C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/iot_monitor.elf

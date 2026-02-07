@@ -1,0 +1,274 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\edge-ai-iot-monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py' '-p' 'COM5'
+e: DIO
+[0;32mI (40) boot.esp32: ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09ed4h ( 40660) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00019efc vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001c304 vaddr=40080000 size=03d14h ( 15636) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0fb90h ( 64400) map[0m
+[0;32mI (135) esp_image: segment 4: paddr=0002fbb8 vaddr=40083d14 size=092fch ( 37628) load[0m
+[0;32mI (150) esp_image: segment 5: paddr=00038ebc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (157) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (157) boot: Disabling RNG early entropy source...[0m
+[0;32mI (168) cpu_start: Multicore app[0m
+[0;32mI (176) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (177) cpu_start: Pro cpu start user code[0m
+[0;32mI (177) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (178) app_init: Application information:[0m
+[0;32mI (182) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (187) app_init: App version:      6498c78-dirty[0m
+[0;32mI (192) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (197) app_init: ELF file SHA256:  09a54ffce...[0m
+[0;32mI (201) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (207) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (210) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (214) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (218) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 3FFB2CC8 len 0002D338 (180 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (240) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008D010 len 00012FF0 (75 KiB): IRAM[0m
+[0;33mW (252) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (264) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (293) main_task: Calling app_main()[0m
+[0;32mI (293) SYS: System initialized. LED Pin: 2[0m
+[0;33mW (293) MAIN: Milestone reached! Loop count: 0[0m
+[0;32mI (1293) MAIN: Loop: 1 | Delay: 1000 ms[0m
+[0;32mI (2293) MAIN: Loop: 2 | Delay: 1000 ms[0m
+[0;32mI (3293) MAIN: Loop: 3 | Delay: 1000 ms[0m
+[0;32mI (4293) MAIN: Loop: 4 | Delay: 1000 ms[0m
+[0;32mI (5293) MAIN: Loop: 5 | Delay: 1000 ms[0m
+[0;32mI (6293) MAIN: Loop: 6 | Delay: 1000 ms[0m
+[0;32mI (7293) MAIN: Loop: 7 | Delay: 1000 ms[0m
+[0;32mI (8293) MAIN: Loop: 8 | Delay: 1000 ms[0m
+[0;32mI (9293) MAIN: Loop: 9 | Delay: 1000 ms[0m
+[0;33mW (10293) MAIN: Milestone reached! Loop count: 10[0m
+[0;32mI (11293) MAIN: Loop: 11 | Delay: 1000 ms[0m
+[0;32mI (12293) MAIN: Loop: 12 | Delay: 1000 ms[0m
+[0;32mI (13293) MAIN: Loop: 13 | Delay: 1000 ms[0m
+[0;32mI (14293) MAIN: Loop: 14 | Delay: 1000 ms[0m
+[0;32mI (15293) MAIN: Loop: 15 | Delay: 1000 ms[0m
+[0;32mI (16293) MAIN: Loop: 16 | Delay: 1000 ms[0m
+[0;32mI (17293) MAIN: Loop: 17 | Delay: 1000 ms[0m
+[0;32mI (18293) MAIN: Loop: 18 | Delay: 1000 ms[0m
+[0;32mI (19293) MAIN: Loop: 19 | Delay: 1000 ms[0m
+[0;33mW (20293) MAIN: Milestone reached! Loop count: 20[0m
+[0;32mI (21293) MAIN: Loop: 21 | Delay: 1000 ms[0m
+[0;32mI (22293) MAIN: Loop: 22 | Delay: 1000 ms[0m
+[0;32mI (23293) MAIN: Loop: 23 | Delay: 1000 ms[0m
+[0;32mI (24293) MAIN: Loop: 24 | Delay: 1000 ms[0m
+[0;32mI (25293) MAIN: Loop: 25 | Delay: 1000 ms[0m
+[0;32mI (26293) MAIN: Loop: 26 | Delay: 1000 ms[0m
+[0;32mI (27293) MAIN: Loop: 27 | Delay: 1000 ms[0m
+[0;32mI (28293) MAIN: Loop: 28 | Delay: 1000 ms[0m
+[0;32mI (29293) MAIN: Loop: 29 | Delay: 1000 ms[0m
+[0;33mW (30293) MAIN: Milestone reached! Loop count: 30[0m
+[0;32mI (31293) MAIN: Loop: 31 | Delay: 1000 ms[0m
+[0;32mI (32293) MAIN: Loop: 32 | Delay: 1000 ms[0m
+[0;32mI (33293) MAIN: Loop: 33 | Delay: 1000 ms[0m
+[0;32mI (34293) MAIN: Loop: 34 | Delay: 1000 ms[0m
+[0;32mI (35293) MAIN: Loop: 35 | Delay: 1000 ms[0m
+[0;32mI (36293) MAIN: Loop: 36 | Delay: 1000 ms[0m
+[0;32mI (37293) MAIN: Loop: 37 | Delay: 1000 ms[0m
+[0;32mI (38293) MAIN: Loop: 38 | Delay: 1000 ms[0m
+[0;32mI (39293) MAIN: Loop: 39 | Delay: 1000 ms[0m
+[0;33mW (40293) MAIN: Milestone reached! Loop count: 40[0m
+[0;32mI (41293) MAIN: Loop: 41 | Delay: 1000 ms[0m
+[0;32mI (42293) MAIN: Loop: 42 | Delay: 1000 ms[0m
+[0;32mI (43293) MAIN: Loop: 43 | Delay: 1000 ms[0m
+[0;32mI (44293) MAIN: Loop: 44 | Delay: 1000 ms[0m
+[0;32mI (45293) MAIN: Loop: 45 | Delay: 1000 ms[0m
+[0;32mI (46293) MAIN: Loop: 46 | Delay: 1000 ms[0m
+[0;32mI (47293) MAIN: Loop: 47 | Delay: 1000 ms[0m
+[0;32mI (48293) MAIN: Loop: 48 | Delay: 1000 ms[0m
+[0;32mI (49293) MAIN: Loop: 49 | Delay: 1000 ms[0m
+[0;33mW (50293) MAIN: Milestone reached! Loop count: 50[0m
+[0;32mI (51293) MAIN: Loop: 51 | Delay: 1000 ms[0m
+[0;32mI (52293) MAIN: Loop: 52 | Delay: 1000 ms[0m
+[0;32mI (53293) MAIN: Loop: 53 | Delay: 1000 ms[0m
+[0;32mI (54293) MAIN: Loop: 54 | Delay: 1000 ms[0m
+[0;32mI (55293) MAIN: Loop: 55 | Delay: 1000 ms[0m
+[0;32mI (56293) MAIN: Loop: 56 | Delay: 1000 ms[0m
+[0;32mI (57293) MAIN: Loop: 57 | Delay: 1000 ms[0m
+[0;32mI (58293) MAIN: Loop: 58 | Delay: 1000 ms[0m
+[0;32mI (59293) MAIN: Loop: 59 | Delay: 1000 ms[0m
+[0;33mW (60293) MAIN: Milestone reached! Loop count: 60[0m
+[0;32mI (61293) MAIN: Loop: 61 | Delay: 1000 ms[0m
+[0;32mI (62293) MAIN: Loop: 62 | Delay: 1000 ms[0m
+[0;32mI (63293) MAIN: Loop: 63 | Delay: 1000 ms[0m
+[0;32mI (64293) MAIN: Loop: 64 | Delay: 1000 ms[0m
+[0;32mI (65293) MAIN: Loop: 65 | Delay: 1000 ms[0m
+[0;32mI (66293) MAIN: Loop: 66 | Delay: 1000 ms[0m
+[0;32mI (67293) MAIN: Loop: 67 | Delay: 1000 ms[0m
+[0;32mI (68293) MAIN: Loop: 68 | Delay: 1000 ms[0m
+[0;32mI (69293) MAIN: Loop: 69 | Delay: 1000 ms[0m
+[0;33mW (70293) MAIN: Milestone reached! Loop count: 70[0m
+[0;32mI (71293) MAIN: Loop: 71 | Delay: 1000 ms[0m
+[0;32mI (72293) MAIN: Loop: 72 | Delay: 1000 ms[0m
+[0;32mI (73293) MAIN: Loop: 73 | Delay: 1000 ms[0m
+[0;32mI (74293) MAIN: Loop: 74 | Delay: 1000 ms[0m
+[0;32mI (75293) MAIN: Loop: 75 | Delay: 1000 ms[0m
+[0;32mI (76293) MAIN: Loop: 76 | Delay: 1000 ms[0m
+[0;32mI (77293) MAIN: Loop: 77 | Delay: 1000 ms[0m
+[0;32mI (78293) MAIN: Loop: 78 | Delay: 1000 ms[0m
+[0;32mI (79293) MAIN: Loop: 79 | Delay: 1000 ms[0m
+[0;33mW (80293) MAIN: Milestone reached! Loop count: 80[0m
+[0;32mI (81293) MAIN: Loop: 81 | Delay: 1000 ms[0m
+[0;32mI (82293) MAIN: Loop: 82 | Delay: 1000 ms[0m
+[0;32mI (83293) MAIN: Loop: 83 | Delay: 1000 ms[0m
+[0;32mI (84293) MAIN: Loop: 84 | Delay: 1000 ms[0m
+[0;32mI (85293) MAIN: Loop: 85 | Delay: 1000 ms[0m
+[0;32mI (86293) MAIN: Loop: 86 | Delay: 1000 ms[0m
+[0;32mI (87293) MAIN: Loop: 87 | Delay: 1000 ms[0m
+[0;32mI (88293) MAIN: Loop: 88 | Delay: 1000 ms[0m
+[0;32mI (89293) MAIN: Loop: 89 | Delay: 1000 ms[0m
+[0;33mW (90293) MAIN: Milestone reached! Loop count: 90[0m
+[0;32mI (91293) MAIN: Loop: 91 | Delay: 1000 ms[0m
+[0;32mI (92293) MAIN: Loop: 92 | Delay: 1000 ms[0m
+[0;32mI (93293) MAIN: Loop: 93 | Delay: 1000 ms[0m
+[0;32mI (94293) MAIN: Loop: 94 | Delay: 1000 ms[0m
+[0;32mI (95293) MAIN: Loop: 95 | Delay: 1000 ms[0m
+[0;32mI (96293) MAIN: Loop: 96 | Delay: 1000 ms[0m
+[0;32mI (97293) MAIN: Loop: 97 | Delay: 1000 ms[0m
+[0;32mI (98293) MAIN: Loop: 98 | Delay: 1000 ms[0m
+[0;32mI (99293) MAIN: Loop: 99 | Delay: 1000 ms[0m
+[0;33mW (100293) MAIN: Milestone reached! Loop count: 100[0m
+[1;31mE (101293) SYS: Loop count exceeded threshold! Resetting...[0m
+[0;33mW (101293) MAIN: Milestone reached! Loop count: 0[0m
+[0;32mI (102293) MAIN: Loop: 1 | Delay: 1000 ms[0m
+[0;32mI (103293) MAIN: Loop: 2 | Delay: 1000 ms[0m
+[0;32mI (104293) MAIN: Loop: 3 | Delay: 1000 ms[0m
+[0;32mI (105293) MAIN: Loop: 4 | Delay: 1000 ms[0m
+[0;32mI (106293) MAIN: Loop: 5 | Delay: 1000 ms[0m
+[0;32mI (107293) MAIN: Loop: 6 | Delay: 1000 ms[0m
+[0;32mI (108293) MAIN: Loop: 7 | Delay: 1000 ms[0m
+[0;32mI (109293) MAIN: Loop: 8 | Delay: 1000 ms[0m
+[0;32mI (110293) MAIN: Loop: 9 | Delay: 1000 ms[0m
+[0;33mW (111293) MAIN: Milestone reached! Loop count: 10[0m
+[0;32mI (112293) MAIN: Loop: 11 | Delay: 1000 ms[0m
+[0;32mI (113293) MAIN: Loop: 12 | Delay: 1000 ms[0m
+[0;32mI (114293) MAIN: Loop: 13 | Delay: 1000 ms[0m
+[0;32mI (115293) MAIN: Loop: 14 | Delay: 1000 ms[0m
+[0;32mI (116293) MAIN: Loop: 15 | Delay: 1000 ms[0m
+[0;32mI (117293) MAIN: Loop: 16 | Delay: 1000 ms[0m
+[0;32mI (118293) MAIN: Loop: 17 | Delay: 1000 ms[0m
+[0;32mI (119293) MAIN: Loop: 18 | Delay: 1000 ms[0m
+[0;32mI (120293) MAIN: Loop: 19 | Delay: 1000 ms[0m
+[0;33mW (121293) MAIN: Milestone reached! Loop count: 20[0m
+[0;32mI (122293) MAIN: Loop: 21 | Delay: 1000 ms[0m
+[0;32mI (123293) MAIN: Loop: 22 | Delay: 1000 ms[0m
+[0;32mI (124293) MAIN: Loop: 23 | Delay: 1000 ms[0m
+[0;32mI (125293) MAIN: Loop: 24 | Delay: 1000 ms[0m
+[0;32mI (126293) MAIN: Loop: 25 | Delay: 1000 ms[0m
+[0;32mI (127293) MAIN: Loop: 26 | Delay: 1000 ms[0m
+[0;32mI (128293) MAIN: Loop: 27 | Delay: 1000 ms[0m
+[0;32mI (129293) MAIN: Loop: 28 | Delay: 1000 ms[0m
+[0;32mI (130293) MAIN: Loop: 29 | Delay: 1000 ms[0m
+[0;33mW (131293) MAIN: Milestone reached! Loop count: 30[0m
+[0;32mI (132293) MAIN: Loop: 31 | Delay: 1000 ms[0m
+[0;32mI (133293) MAIN: Loop: 32 | Delay: 1000 ms[0m
+[0;32mI (134293) MAIN: Loop: 33 | Delay: 1000 ms[0m
+[0;32mI (135293) MAIN: Loop: 34 | Delay: 1000 ms[0m
+[0;32mI (136293) MAIN: Loop: 35 | Delay: 1000 ms[0m
+[0;32mI (137293) MAIN: Loop: 36 | Delay: 1000 ms[0m
+[0;32mI (138293) MAIN: Loop: 37 | Delay: 1000 ms[0m
+[0;32mI (139293) MAIN: Loop: 38 | Delay: 1000 ms[0m
+[0;32mI (140293) MAIN: Loop: 39 | Delay: 1000 ms[0m
+[0;33mW (141293) MAIN: Milestone reached! Loop count: 40[0m
+[0;32mI (142293) MAIN: Loop: 41 | Delay: 1000 ms[0m
+[0;32mI (143293) MAIN: Loop: 42 | Delay: 1000 ms[0m
+[0;32mI (144293) MAIN: Loop: 43 | Delay: 1000 ms[0m
+[0;32mI (145293) MAIN: Loop: 44 | Delay: 1000 ms[0m
+[0;32mI (146293) MAIN: Loop: 45 | Delay: 1000 ms[0m
+[0;32mI (147293) MAIN: Loop: 46 | Delay: 1000 ms[0m
+[0;32mI (148293) MAIN: Loop: 47 | Delay: 1000 ms[0m
+[0;32mI (149293) MAIN: Loop: 48 | Delay: 1000 ms[0m
+[0;32mI (150293) MAIN: Loop: 49 | Delay: 1000 ms[0m
+[0;33mW (151293) MAIN: Milestone reached! Loop count: 50[0m
+[0;32mI (152293) MAIN: Loop: 51 | Delay: 1000 ms[0m
+[0;32mI (153293) MAIN: Loop: 52 | Delay: 1000 ms[0m
+[0;32mI (154293) MAIN: Loop: 53 | Delay: 1000 ms[0m
+[0;32mI (155293) MAIN: Loop: 54 | Delay: 1000 ms[0m
+[0;32mI (156293) MAIN: Loop: 55 | Delay: 1000 ms[0m
+[0;32mI (157293) MAIN: Loop: 56 | Delay: 1000 ms[0m
+[0;32mI (158293) MAIN: Loop: 57 | Delay: 1000 ms[0m
+[0;32mI (159293) MAIN: Loop: 58 | Delay: 1000 ms[0m
+J��ѹesp32: SPI Flash Size : 2MB
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09ed4h ( 40660) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00019efc vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001c304 vaddr=40080000 size=03d14h ( 15636) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0fb90h ( 64400) map[0m
+[0;32mI (135) esp_image: segment 4: paddr=0002fbb8 vaddr=40083d14 size=092fch ( 37628) load[0m
+[0;32mI (150) esp_image: segment 5: paddr=00038ebc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (157) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (157) boot: Disabling RNG early entropy source...[0m
+[0;32mI (168) cpu_start: Multicore app[0m
+[0;32mI (176) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (177) cpu_start: Pro cpu start user code[0m
+[0;32mI (177) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (178) app_init: Application information:[0m
+[0;32mI (182) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (187) app_init: App version:      6498c78-dirty[0m
+[0;32mI (192) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (197) app_init: ELF file SHA256:  09a54ffce...[0m
+[0;32mI (201) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (206) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (210) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (214) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (218) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (225) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 3FFB2CC8 len 0002D338 (180 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (240) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008D010 len 00012FF0 (75 KiB): IRAM[0m
+[0;33mW (252) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (264) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (293) main_task: Calling app_main()[0m
+[0;32mI (293) SYS: System initialized. LED Pin: 2[0m
+[0;33mW (293) MAIN: Milestone reached! Loop count: 0[0m
+[0;32mI (1293) MAIN: Loop: 1 | Delay: 1000 ms[0m
+[0;32mI (2293) MAIN: Loop: 2 | Delay: 1000 ms[0m
+[0;32mI (3293) MAIN: Loop: 3 | Delay: 1000 ms[0m
+[0;32mI (4293) MAIN: Loop: 4 | Delay: 1000 ms[0m
+[0;32mI (5293) MAIN: Loop: 5 | Delay: 1000 ms[0m
+[0;32mI (6293) MAIN: Loop: 6 | Delay: 1000 ms[0m
+[0;32mI (7293) MAIN: Loop: 7 | Delay: 1000 ms[0m
+[0;32mI (8293) MAIN: Loop: 8 | Delay: 1000 ms[0m
+[0;32mI (9293) MAIN: Loop: 9 | Delay: 1000 ms[0m
+[0;33mW (10293) MAIN: Milestone reached! Loop count: 10[0m

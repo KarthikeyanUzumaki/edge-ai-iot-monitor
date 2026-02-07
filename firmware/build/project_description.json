@@ -1,15 +1,15 @@
 {
     "version":            "1.2",
-    "project_name":       "edge-ai-iot-monitor",
-    "project_version":    "3892e71-dirty",
+    "project_name":       "iot_monitor",
+    "project_version":    "6498c78-dirty",
     "project_path":       "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.5.2-2",
     "build_dir":          "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build",
     "config_file":        "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/sdkconfig",
     "config_defaults":    "",
     "bootloader_elf":     "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/bootloader/bootloader.elf",
-    "app_elf":            "edge-ai-iot-monitor.elf",
-    "app_bin":            "edge-ai-iot-monitor.bin",
+    "app_elf":            "iot_monitor.elf",
+    "app_bin":            "iot_monitor.bin",
     "build_type":         "flash_app",
     "git_revision":       "v5.5.2-2-gf83622dfa-dirty",
     "target":             "esp32",
@@ -1225,8 +1225,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/main.c", "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/comms_task.c", "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/inference_task.c", "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/led_task.c", "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/sensor_task.c" ],
-            "include_dirs": [ "include" ]
+            "sources": [ "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/main/main.c" ],
+            "include_dirs": [ "." ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -2911,7 +2911,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "include" ]
+            "include_dirs": [ "." ]
         }
     },
     "debug_prefix_map_gdbinit": "",

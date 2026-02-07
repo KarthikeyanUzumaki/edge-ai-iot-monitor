@@ -1,0 +1,265 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\edge-ai-iot-monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py' '-p' 'COM5'
+H(
+B��J��ѹesp32: SPI Flas�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09794h ( 38804) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=000197bc vaddr=3ffb0000 size=023e0h (  9184) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001bba4 vaddr=40080000 size=04474h ( 17524) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f0a0h ( 61600) map[0m
+[0;32mI (134) esp_image: segment 4: paddr=0002f0c8 vaddr=40084474 size=08b90h ( 35728) load[0m
+[0;32mI (148) esp_image: segment 5: paddr=00037c60 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (154) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (155) boot: Disabling RNG early entropy source...[0m
+[0;32mI (166) cpu_start: Multicore app[0m
+[0;32mI (174) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (174) cpu_start: Pro cpu start user code[0m
+[0;32mI (174) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (176) app_init: Application information:[0m
+[0;32mI (180) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (185) app_init: App version:      6498c78-dirty[0m
+[0;32mI (189) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (194) app_init: ELF file SHA256:  fac6b33d4...[0m
+[0;32mI (199) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (204) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (208) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (212) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (216) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (222) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (227) heap_init: At 3FFB2D00 len 0002D300 (180 KiB): DRAM[0m
+[0;32mI (233) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (238) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (243) heap_init: At 4008D004 len 00012FFC (75 KiB): IRAM[0m
+[0;33mW (250) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (262) spi_flash: detected chip: generic[0m
+[0;32mI (265) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (281) main_task: Started on CPU0[0m
+[0;32mI (291) main_task: Calling app_main()[0m
+[0;32mI (291) EDGE_AI_BUFFER: Day 6: Initializing Ring Buffer for Edge-AI Smoothing...[0m
+[0;32mI (291) EDGE_AI_BUFFER: RAW: T=28.3 H=61.7 | AVG (Last 1): T=28.30 H=61.70[0m
+[0;32mI (2291) EDGE_AI_BUFFER: RAW: T=28.6 H=63.6 | AVG (Last 2): T=28.45 H=62.65[0m
+[0;32mI (4291) EDGE_AI_BUFFER: RAW: T=29.9 H=63.5 | AVG (Last 3): T=28.93 H=62.93[0m
+[0;32mI (6291) EDGE_AI_BUFFER: RAW: T=28.8 H=62.9 | AVG (Last 4): T=28.90 H=62.93[0m
+[0;32mI (8291) EDGE_AI_BUFFER: RAW: T=29.1 H=61.4 | AVG (Last 5): T=28.94 H=62.62[0m
+[0;32mI (10291) EDGE_AI_BUFFER: RAW: T=28.3 H=60.1 | AVG (Last 6): T=28.83 H=62.20[0m
+[0;32mI (12291) EDGE_AI_BUFFER: RAW: T=28.4 H=63.1 | AVG (Last 7): T=28.77 H=62.33[0m
+[0;32mI (14291) EDGE_AI_BUFFER: RAW: T=27.8 H=63.4 | AVG (Last 8): T=28.65 H=62.46[0m
+[0;32mI (16291) EDGE_AI_BUFFER: RAW: T=28.9 H=64.2 | AVG (Last 9): T=28.68 H=62.66[0m
+[0;32mI (18291) EDGE_AI_BUFFER: RAW: T=27.9 H=60.2 | AVG (Last 10): T=28.60 H=62.41[0m
+[0;32mI (20291) EDGE_AI_BUFFER: RAW: T=28.4 H=62.5 | AVG (Last 10): T=28.61 H=62.49[0m
+[0;32mI (22291) EDGE_AI_BUFFER: RAW: T=28.6 H=63.2 | AVG (Last 10): T=28.61 H=62.45[0m
+[0;32mI (24291) EDGE_AI_BUFFER: RAW: T=27.0 H=63.9 | AVG (Last 10): T=28.32 H=62.49[0m
+[0;32mI (26291) EDGE_AI_BUFFER: RAW: T=27.5 H=64.1 | AVG (Last 10): T=28.19 H=62.61[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+invalid header: 0xffffffff
+invalid header: 0xffffffff
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0xffffffff,len:-1
+ets Jul 29 2019 12:21:46
+
+rst:0x7 (TG0WDT_SYS_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (54) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (54) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (54) boot: Multicore bootloader[0m
+[0;32mI (58) boot: chip revision: v3.1[0m
+[0;32mI (61) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (64) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (68) boot.esp32: SPI Flash Size : 2MB[0m
+[0;33mW (71) boot.esp32: PRO CPU has been reset by WDT[0m
+[0;33mW (76) boot.esp32: WDT rst info: PRO CPU PC=0x40081532[0m
+[0;33mW (81) boot.esp32: WDT rst info: APP CPU PC=0x4008ce0b[0m
+[0;32mI (86) boot: Enabling RNG early entropy source...[0m
+[0;32mI (90) boot: Partition Table:[0m
+[0;32mI (93) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (99) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (105) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (112) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (119) boot: End of partition table[0m
+[0;32mI (122) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09794h ( 38804) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=000197bc vaddr=3ffb0000 size=023e0h (  9184) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0001bba4 vaddr=40080000 size=04474h ( 17524) load[0m
+[0;32mI (154) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0f0a0h ( 61600) map[0m
+[0;32mI (175) esp_image: segment 4: paddr=0002f0c8 vaddr=40084474 size=08b90h ( 35728) load[0m
+[0;32mI (190) esp_image: segment 5: paddr=00037c60 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (208) cpu_start: Multicore app[0m
+[0;32mI (216) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (218) app_init: Application information:[0m
+[0;32mI (222) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (227) app_init: App version:      6498c78-dirty[0m
+[0;32mI (231) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (236) app_init: ELF file SHA256:  fac6b33d4...[0m
+[0;32mI (241) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (246) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (250) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (254) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (258) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2D00 len 0002D300 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 4008D004 len 00012FFC (75 KiB): IRAM[0m
+[0;33mW (292) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (304) spi_flash: detected chip: generic[0m
+[0;32mI (307) spi_flash: flash io: dio[0m
+[0;33mW (310) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (323) main_task: Started on CPU0[0m
+[0;32mI (333) main_task: Calling app_main()[0m
+[0;32mI (333) EDGE_AI_BUFFER: Day 6: Initializing Ring Buffer for Edge-AI Smoothing...[0m
+[0;32mI (333) EDGE_AI_BUFFER: RAW: T=28.1 H=62.0 | AVG (Last 1): T=28.10 H=62.00[0m
+[0;32mI (2333) EDGE_AI_BUFFER: RAW: T=29.6 H=61.0 | AVG (Last 2): T=28.85 H=61.50[0m
+[0;32mI (4333) EDGE_AI_BUFFER: RAW: T=28.0 H=60.2 | AVG (Last 3): T=28.57 H=61.07[0m
+[0;32mI (6333) EDGE_AI_BUFFER: RAW: T=29.5 H=62.7 | AVG (Last 4): T=28.80 H=61.47[0m
+[0;32mI (8333) EDGE_AI_BUFFER: RAW: T=27.3 H=60.4 | AVG (Last 5): T=28.50 H=61.26[0m
+[0;32mI (10333) EDGE_AI_BUFFER: RAW: T=27.3 H=63.0 | AVG (Last 6): T=28.30 H=61.55[0m
+[0;32mI (12333) EDGE_AI_BUFFER: RAW: T=28.4 H=62.8 | AVG (Last 7): T=28.31 H=61.73[0m
+[0;32mI (14333) EDGE_AI_BUFFER: RAW: T=27.1 H=61.9 | AVG (Last 8): T=28.16 H=61.75[0m
+[0;32mI (16333) EDGE_AI_BUFFER: RAW: T=29.2 H=62.0 | AVG (Last 9): T=28.28 H=61.78[0m
+[0;32mI (18333) EDGE_AI_BUFFER: RAW: T=28.1 H=64.2 | AVG (Last 10): T=28.26 H=62.02[0m
+[0;32mI (20333) EDGE_AI_BUFFER: RAW: T=27.0 H=64.6 | AVG (Last 10): T=28.15 H=62.28[0m
+[0;32mI (22333) EDGE_AI_BUFFER: RAW: T=29.7 H=61.1 | AVG (Last 10): T=28.16 H=62.29[0m
+[0;32mI (24333) EDGE_AI_BUFFER: RAW: T=29.3 H=61.6 | AVG (Last 10): T=28.29 H=62.43[0m
+[0;32mI (26333) EDGE_AI_BUFFER: RAW: T=27.4 H=60.4 | AVG (Last 10): T=28.08 H=62.20[0m
+[0;32mI (28333) EDGE_AI_BUFFER: RAW: T=28.7 H=62.2 | AVG (Last 10): T=28.22 H=62.38[0m
+[0;32mI (30333) EDGE_AI_BUFFER: RAW: T=28.8 H=62.8 | AVG (Last 10): T=28.37 H=62.36[0m
+[0;32mI (32333) EDGE_AI_BUFFER: RAW: T=27.7 H=63.9 | AVG (Last 10): T=28.30 H=62.47[0m
+[0;32mI (34333) EDGE_AI_BUFFER: RAW: T=28.6 H=62.7 | AVG (Last 10): T=28.45 H=62.55[0m
+[0;32mI (36333) EDGE_AI_BUFFER: RAW: T=29.3 H=60.4 | AVG (Last 10): T=28.46 H=62.39[0m
+[0;32mI (38333) EDGE_AI_BUFFER: RAW: T=27.3 H=62.5 | AVG (Last 10): T=28.38 H=62.22[0m
+[0;32mI (40333) EDGE_AI_BUFFER: RAW: T=28.4 H=61.7 | AVG (Last 10): T=28.52 H=61.93[0m
+[0;32mI (42333) EDGE_AI_BUFFER: RAW: T=27.8 H=62.5 | AVG (Last 10): T=28.33 H=62.07[0m
+[0;32mI (44333) EDGE_AI_BUFFER: RAW: T=27.5 H=63.5 | AVG (Last 10): T=28.15 H=62.26[0m
+[0;32mI (46333) EDGE_AI_BUFFER: RAW: T=28.8 H=61.5 | AVG (Last 10): T=28.29 H=62.37[0m
+[0;32mI (48333) EDGE_AI_BUFFER: RAW: T=28.7 H=61.6 | AVG (Last 10): T=28.29 H=62.31[0m
+[0;32mI (50333) EDGE_AI_BUFFER: RAW: T=28.8 H=64.1 | AVG (Last 10): T=28.29 H=62.44[0m
+[0;32mI (52333) EDGE_AI_BUFFER: RAW: T=27.5 H=63.5 | AVG (Last 10): T=28.27 H=62.40[0m
+[0;32mI (54333) EDGE_AI_BUFFER: RAW: T=27.3 H=64.1 | AVG (Last 10): T=28.14 H=62.54[0m
+[0;32mI (56333) EDGE_AI_BUFFER: RAW: T=29.4 H=64.8 | AVG (Last 10): T=28.15 H=62.98[0m
+[0;32mI (58333) EDGE_AI_BUFFER: RAW: T=27.8 H=61.7 | AVG (Last 10): T=28.20 H=62.90[0m
+[0;32mI (60333) EDGE_AI_BUFFER: RAW: T=29.9 H=64.0 | AVG (Last 10): T=28.35 H=63.13[0m
+[0;32mI (62333) EDGE_AI_BUFFER: RAW: T=27.6 H=63.9 | AVG (Last 10): T=28.33 H=63.27[0m
+[0;32mI (64333) EDGE_AI_BUFFER: RAW: T=27.2 H=62.6 | AVG (Last 10): T=28.30 H=63.18[0m
+[0;32mI (66333) EDGE_AI_BUFFER: RAW: T=29.0 H=64.5 | AVG (Last 10): T=28.32 H=63.48[0m
+[0;32mI (68333) EDGE_AI_BUFFER: RAW: T=29.3 H=60.2 | AVG (Last 10): T=28.38 H=63.34[0m
+[0;32mI (70333) EDGE_AI_BUFFER: RAW: T=29.6 H=61.7 | AVG (Last 10): T=28.46 H=63.10[0m
+[0;32mI (72333) EDGE_AI_BUFFER: RAW: T=29.2 H=64.1 | AVG (Last 10): T=28.63 H=63.16[0m
+[0;32mI (74333) EDGE_AI_BUFFER: RAW: T=27.9 H=64.6 | AVG (Last 10): T=28.69 H=63.21[0m
+[0;32mI (76333) EDGE_AI_BUFFER: RAW: T=27.5 H=60.2 | AVG (Last 10): T=28.50 H=62.75[0m
+[0;32mI (78333) EDGE_AI_BUFFER: RAW: T=27.6 H=63.3 | AVG (Last 10): T=28.48 H=62.91[0m
+[0;32mI (80333) EDGE_AI_BUFFER: RAW: T=27.7 H=63.4 | AVG (Last 10): T=28.26 H=62.85[0m
+[0;32mI (82333) EDGE_AI_BUFFER: RAW: T=27.1 H=61.2 | AVG (Last 10): T=28.21 H=62.58[0m
+[0;32mI (84333) EDGE_AI_BUFFER: RAW: T=28.6 H=60.2 | AVG (Last 10): T=28.35 H=62.34[0m
+[0;32mI (86333) EDGE_AI_BUFFER: RAW: T=28.4 H=61.8 | AVG (Last 10): T=28.29 H=62.07[0m
+[0;32mI (88333) EDGE_AI_BUFFER: RAW: T=28.4 H=60.7 | AVG (Last 10): T=28.20 H=62.12[0m
+[0;32mI (90333) EDGE_AI_BUFFER: RAW: T=27.4 H=61.2 | AVG (Last 10): T=27.98 H=62.07[0m
+[0;32mI (92333) EDGE_AI_BUFFER: RAW: T=29.6 H=61.6 | AVG (Last 10): T=28.02 H=61.82[0m
+[0;32mI (94333) EDGE_AI_BUFFER: RAW: T=28.1 H=62.1 | AVG (Last 10): T=28.04 H=61.57[0m
+[0;32mI (96333) EDGE_AI_BUFFER: RAW: T=29.1 H=61.5 | AVG (Last 10): T=28.20 H=61.70[0m
+[0;32mI (98333) EDGE_AI_BUFFER: RAW: T=29.3 H=64.2 | AVG (Last 10): T=28.37 H=61.79[0m
+[0;32mI (100333) EDGE_AI_BUFFER: RAW: T=29.0 H=62.5 | AVG (Last 10): T=28.50 H=61.70[0m
+[0;32mI (102333) EDGE_AI_BUFFER: RAW: T=28.1 H=62.1 | AVG (Last 10

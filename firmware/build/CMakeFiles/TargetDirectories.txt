@@ -10,7 +10,7 @@ C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/CMakeFiles/mo
 C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/CMakeFiles/flash.dir
 C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/CMakeFiles/encrypted-flash.dir
 C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/CMakeFiles/_project_elf_src.dir
-C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/CMakeFiles/edge-ai-iot-monitor.elf.dir
+C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/CMakeFiles/iot_monitor.elf.dir
 C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/CMakeFiles/size.dir
 C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/CMakeFiles/size-files.dir
 C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/CMakeFiles/size-components.dir

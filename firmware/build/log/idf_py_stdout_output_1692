@@ -1,0 +1,154 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\edge-ai-iot-monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py' '-p' 'COM5'
+"%=5
+I (40) boot.esp32: SPI�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+I (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader
+I (27) boot: compile time Feb  3 2026 20:56:52
+I (28) boot: Multicore bootloader
+I (30) boot: chip revision: v3.1
+I (33) boot.esp32: SPI Speed      : 40MHz
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09e34h ( 40500) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00019e5c vaddr=3ffb0000 size=02400h (  9216) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001c264 vaddr=40080000 size=03db4h ( 15796) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0fba4h ( 64420) map[0m
+[0;32mI (135) esp_image: segment 4: paddr=0002fbcc vaddr=40083db4 size=0925ch ( 37468) load[0m
+[0;32mI (150) esp_image: segment 5: paddr=00038e30 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (157) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (157) boot: Disabling RNG early entropy source...[0m
+[0;32mI (168) cpu_start: Multicore app[0m
+[0;32mI (176) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (176) cpu_start: Pro cpu start user code[0m
+[0;32mI (177) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (178) app_init: Application information:[0m
+[0;32mI (182) app_init: Project name:     edge-ai-iot-monitor[0m
+[0;32mI (187) app_init: App version:      6498c78-dirty[0m
+[0;32mI (192) app_init: Compile time:     Feb  4 2026 20:26:08[0m
+[0;32mI (197) app_init: ELF file SHA256:  76aa26a75...[0m
+[0;32mI (201) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (206) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (210) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (214) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (218) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (224) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (229) heap_init: At 3FFB2CC8 len 0002D338 (180 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (240) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 4008D010 len 00012FF0 (75 KiB): IRAM[0m
+[0;33mW (252) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (264) spi_flash: detected chip: generic[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (270) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (293) main_task: Calling app_main()[0m
+Loop Count: 0 | Uptime: 0.04 s | LED: ON
+Loop Count: 1 | Uptime: 1.04 s | LED: OFF
+Loop Count: 2 | Uptime: 2.04 s | LED: ON
+Loop Count: 3 | Uptime: 3.04 s | LED: OFF
+Loop Count: 4 | Uptime: 4.04 s | LED: ON
+Loop Count: 5 | Uptime: 5.04 s | LED: OFF
+Loop Count: 6 | Uptime: 6.04 s | LED: ON
+Loop Count: 7 | Uptime: 7.04 s | LED: OFF
+Loop Count: 8 | Uptime: 8.04 s | LED: ON
+Loop Count: 9 | Uptime: 9.04 s | LED: OFF
+Loop Count: 10 | Uptime: 10.04 s | LED: ON
+Loop Count: 11 | Uptime: 11.04 s | LED: OFF
+Loop Count: 12 | Uptime: 12.04 s | LED: ON
+Loop Count: 13 | Uptime: 13.04 s | LED: OFF
+Loop Count: 14 | Uptime: 14.04 s | LED: ON
+Loop Count: 15 | Uptime: 15.04 s | LED: OFF
+Loop Count: 16 | Uptime: 16.04 s | LED: ON
+Loop Count: 17 | Uptime: 17.04 s | LED: OFF
+Loop Count: 18 | Uptime: 18.04 s | LED: ON
+Loop Count: 19 | Uptime: 19.04 s | LED: OFF
+Loop Count: 20 | Uptime: 20.04 s | LED: ON
+Loop Count: 21 | Uptime: 21.04 s | LED: OFF
+Loop Count: 22 | Uptime: 22.04 s | LED: ON
+Loop Count: 23 | Uptime: 23.04 s | LED: OFF
+Loop Count: 24 | Uptime: 24.04 s | LED: ON
+Loop Count: 25 | Uptime: 25.04 s | LED: OFF
+Loop Count: 26 | Uptime: 26.04 s | LED: ON
+Loop Count: 27 | Uptime: 27.04 s | LED: OFF
+Loop Count: 28 | Uptime: 28.04 s | LED: ON
+Loop Count: 29 | Uptime: 29.04 s | LED: OFF
+Loop Count: 30 | Uptime: 30.04 s | LED: ON
+Loop Count: 31 | Uptime: 31.04 s | LED: OFF
+Loop Count: 32 | Uptime: 32.04 s | LED: ON
+Loop Count: 33 | Uptime: 33.04 s | LED: OFF
+Loop Count: 34 | Uptime: 34.04 s | LED: ON
+Loop Count: 35 | Uptime: 35.04 s | LED: OFF
+Loop Count: 36 | Uptime: 36.04 s | LED: ON
+Loop Count: 37 | Uptime: 37.04 s | LED: OFF
+Loop Count: 38 | Uptime: 38.04 s | LED: ON
+Loop Count: 39 | Uptime: 39.04 s | LED: OFF
+Loop Count: 40 | Uptime: 40.04 s | LED: ON
+Loop Count: 41 | Uptime: 41.04 s | LED: OFF
+Loop Count: 42 | Uptime: 42.04 s | LED: ON
+Loop Count: 43 | Uptime: 43.04 s | LED: OFF
+Loop Count: 44 | Uptime: 44.04 s | LED: ON
+Loop Count: 45 | Uptime: 45.04 s | LED: OFF
+Loop Count: 46 | Uptime: 46.04 s | LED: ON
+Loop Count: 47 | Uptime: 47.04 s | LED: OFF
+Loop Count: 48 | Uptime: 48.04 s | LED: ON
+Loop Count: 49 | Uptime: 49.04 s | LED: OFF
+Loop Count: 50 | Uptime: 50.04 s | LED: ON
+Loop Count: 51 | Uptime: 51.04 s | LED: OFF
+Loop Count: 52 | Uptime: 52.04 s | LED: ON
+Loop Count: 53 | Uptime: 53.04 s | LED: OFF
+Loop Count: 54 | Uptime: 54.04 s | LED: ON
+Loop Count: 55 | Uptime: 55.04 s | LED: OFF
+Loop Count: 56 | Uptime: 56.04 s | LED: ON
+Loop Count: 57 | Uptime: 57.04 s | LED: OFF
+Loop Count: 58 | Uptime: 58.04 s | LED: ON
+Loop Count: 59 | Uptime: 59.04 s | LED: OFF
+Loop Count: 60 | Uptime: 60.04 s | LED: ON
+Loop Count: 61 | Uptime: 61.04 s | LED: OFF
+Loop Count: 62 | Uptime: 62.04 s | LED: ON
+Loop Count: 63 | Uptime: 63.04 s | LED: OFF
+Loop Count: 64 | Uptime: 64.04 s | LED: ON
+Loop Count: 65 | Uptime: 65.04 s | LED: OFF
+Loop Count: 66 | Uptime: 66.04 s | LED: ON
+Loop Count: 67 | Uptime: 67.04 s | LED: OFF
+Loop Count: 68 | Uptime: 68.04 s | LED: ON
+Loop Count: 69 | Uptime: 69.04 s | LED: OFF
+Loop Count: 70 | Uptime: 70.04 s | LED: ON
+Loop Count: 71 | Uptime: 71.04 s | LED: OFF
+Loop Count: 72 | Uptime: 72.04 s | LED: ON
+Loop Count: 73 | Uptime: 73.04 s | LED: OFF
+Loop Count: 74 | Uptime: 74.04 s | LED: ON
+Loop Count: 75 | Uptime: 75.04 s | LED: OFF
+Loop Count: 76 | Uptime: 76.04 s | LED: ON
+Loop Count: 77 | Uptime: 77.04 s | LED: OFF
+Loop Count: 78 | Uptime: 78.04 s | LED: ON
+Loop Count: 79 | Uptime: 79.04 s | LED: OFF
+Loop Count: 80 | Uptime: 80.04 s | LED: ON
+Loop Count: 81 | Uptime: 81.04 s | LED: OFF
+Loop Count: 82 | Uptime: 82.04 s | LED: ON
+Loop Count: 83 | Uptime: 83.04 s | LED: OFF
+Loop Count: 84 | Uptime: 84.04 s | LED: ON
+Loop Count: 85 | Uptime: 85.04 s | LED: OFF
+Loop Count: 86 | Uptime: 86.04 s | LED: ON
+Loop Count: 87 | Uptime: 87.04 s | LED: OFF
+Loop Count: 88 | Uptime: 88.04 s | LED: ON
+Loop Count: 89 | Uptime: 89.04 s | LED: OFF
+Loop Count: 90 | Uptime: 90.04 s | LED: ON
+Loop Count: 91 | Uptime: 91.04 s | LED: OFF
+Loop Count: 92 | Uptime: 92.04 s | LED: ON
+Loop Count: 93 | Uptime: 93.04 s | LED: OFF
+Loop Count: 94 | Uptime: 94.04 s | LED: ON
