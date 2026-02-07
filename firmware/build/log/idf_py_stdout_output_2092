@@ -1200,4 +1200,113 @@ I (450999) NET: Sent Payload (Size: 106)
 [0;32mI (959929) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
 [0;32mI (959999) NET: Sent Payload (Size: 107)[0m
 [0;32mI (961949) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
-[0;
+[0;32mI (962029) NET: Sent Payload (Size: 107)[0m
+[0;32mI (962459) HEALTH: Heap: 217064 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (963969) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (964039) NET: Sent Payload (Size: 107)[0m
+[0;32mI (965989) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (966189) NET: Sent Payload (Size: 107)[0m
+[0;33mW (968009) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (970029) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (970119) NET: Sent Payload (Size: 107)[0m
+[0;32mI (972049) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (972229) NET: Sent Payload (Size: 107)[0m
+[0;32mI (972459) HEALTH: Heap: 217064 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (974069) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (974149) NET: Sent Payload (Size: 107)[0m
+[0;33mW (976089) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (978109) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (978189) NET: Sent Payload (Size: 107)[0m
+[0;32mI (980129) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (980199) NET: Sent Payload (Size: 107)[0m
+[0;32mI (982149) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (982369) NET: Sent Payload (Size: 107)[0m
+[0;32mI (982459) HEALTH: Heap: 217064 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (984169) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (984249) NET: Sent Payload (Size: 107)[0m
+[0;32mI (986189) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (986349) NET: Sent Payload (Size: 107)[0m
+[0;32mI (988209) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (988519) NET: Sent Payload (Size: 107)[0m
+[0;33mW (990229) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (992249) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (992319) NET: Sent Payload (Size: 107)[0m
+[0;32mI (992459) HEALTH: Heap: 217064 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (994269) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (994499) NET: Sent Payload (Size: 107)[0m
+[0;32mI (996289) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (996379) NET: Sent Payload (Size: 107)[0m
+[0;32mI (998309) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (998389) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1000329) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1000519) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1002349) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1002459) HEALTH: Heap: 213228 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (1002559) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1004369) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1004589) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1006389) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1006559) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1008409) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1008869) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1010429) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1010629) NET: Sent Payload (Size: 107)[0m
+[0;33mW (1012449) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1012459) HEALTH: Heap: 217064 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (1014469) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1014539) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1016489) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1016559) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1018509) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1019109) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1020529) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1020659) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1022459) HEALTH: Heap: 217064 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (1022549) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1022609) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1024569) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1024639) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1026589) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1026659) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1028609) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1028699) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1030629) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1030899) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1032459) HEALTH: Heap: 217064 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (1032649) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1032739) NET: Sent Payload (Size: 107)[0m
+[0;33mW (1034669) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1036689) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1037049) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1038709) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1038779) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1040729) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1040939) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1042459) HEALTH: Heap: 217064 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (1042749) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1042819) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1044769) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1044839) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1046789) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1046869) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1048809) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1048879) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1050829) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1050969) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1052459) HEALTH: Heap: 217064 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (1052849) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1053009) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1054869) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1055059) NET: Sent Payload (Size: 107)[0m
+[0;33mW (1056889) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1058909) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1058969) NET: Sent Payload (Size: 107)[0m
+[0;32mI (1060929) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[1;31mE (1060929) transport_base: poll_write select error 104, errno = Connection reset by peer, fd = 54[0m
+[0;33mW (1060929) transport_base: Poll timeout or error, errno=Success, fd=54, timeout_ms=5000[0m
+[1;31mE (1060939) HTTP_CLIENT: Error write request[0m
+[0;33mW (1060949) NET: Upload Failed: ESP_ERR_HTTP_WRITE_DATA[0m
+[0;32mI (1062459) HEALTH: Heap: 217484 | Stack Sensor: 2144 | Stack Net: 1740[0m
+[0;32mI (1062949) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1064969) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m
+[0;32mI (1066989) MAIN_APP: Environment: WARNING: Limits near (Score: 60)[0m

@@ -44,7 +44,7 @@ void sensor_task(void *pvParameters) {
       ESP_LOGW(TAG, "Sensor Read Error: %d", raw_data.status);
     }
 
-    vTaskDelay(pdMS_TO_TICKS(2000));
+    vTaskDelay(pdMS_TO_TICKS(1000));
   }
 }
 

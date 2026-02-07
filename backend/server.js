@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 
 
 const limiter = rateLimit({
-    windowMs: 1 * 60 * 1000,
-    max: 60,
+    windowMs: 1 * 60 * 1000, 
+    max: 120,
     message: "Too many requests, please slow down."
 });
 app.use('/data', limiter);
