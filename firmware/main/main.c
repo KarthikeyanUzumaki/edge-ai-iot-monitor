@@ -152,6 +152,7 @@ void app_main(void) {
     wifi_wait_for_connection();
 
     ai_queue = xQueueCreate(5, sizeof(inference_result_t));
+    ai_init();
 
     xTaskCreate(sensor_task, "AI_Sensor", 4096, NULL, 5, &h_sensor_task);
     xTaskCreate(network_task, "Network", 4096, NULL, 4, &h_net_task);
