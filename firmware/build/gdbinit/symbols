@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/bootloader/bootloader.elf
+    add-symbol-file C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/iot_monitor.elf
+file C:/Embedded_project/edge-ai-iot-monitor/firmware/build/iot_monitor.elf

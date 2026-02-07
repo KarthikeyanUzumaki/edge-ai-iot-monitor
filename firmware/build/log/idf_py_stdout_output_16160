@@ -1,0 +1,1211 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Embedded_project\edge-ai-iot-monitor\firmware\build\iot_monitor.elf C:\Embedded_project\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py'
+DIO
+[0;32mI (40) boot.esp32: SPI Flets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  7 2026 19:22:30[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21acch (137932) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=00031af4 vaddr=3ffb0000 size=03f34h ( 16180) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00035a30 vaddr=40080000 size=0a5e8h ( 42472) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a9c08h (695304) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e9c30 vaddr=4008a5e8 size=0da08h ( 55816) load[0m
+[0;32mI (418) esp_image: segment 5: paddr=000f7640 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (430) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (430) boot: Disabling RNG early entropy source...[0m
+[0;32mI (440) cpu_start: Multicore app[0m
+[0;32mI (449) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (449) cpu_start: Pro cpu start user code[0m
+[0;32mI (449) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (451) app_init: Application information:[0m
+[0;32mI (454) app_init: Project name:     iot_monitor[0m
+[0;32mI (459) app_init: App version:      fb470d1-dirty[0m
+[0;32mI (463) app_init: Compile time:     Feb  7 2026 19:06:53[0m
+[0;32mI (468) app_init: ELF file SHA256:  ecc5b3d50...[0m
+[0;32mI (473) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (478) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (482) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (486) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (490) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFB9B68 len 00026498 (153 KiB): DRAM[0m
+[0;32mI (506) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (512) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (517) heap_init: At 40098000 len 00008000 (32 KiB): IRAM[0m
+[0;33mW (524) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (535) spi_flash: detected chip: generic[0m
+[0;32mI (539) spi_flash: flash io: dio[0m
+[0;33mW (542) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (595) wifi:wifi driver task: 3ffc1bd8, prio:23, stack:6656, core=0[0m
+[0;32mI (605) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (605) wifi:wifi certification version: v7.0[0m
+[0;32mI (605) wifi:config NVS flash: enabled[0m
+[0;32mI (605) wifi:config nano formatting: disabled[0m
+[0;32mI (605) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (615) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (615) wifi:Init management short buffer num: 32[0m
+[0;32mI (625) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (625) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (635) wifi:Init static rx buffer num: 10[0m
+[0;32mI (635) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (635) wifi_init: rx ba win: 6[0m
+[0;32mI (645) wifi_init: accept mbox: 6[0m
+[0;32mI (645) wifi_init: tcpip mbox: 32[0m
+[0;32mI (645) wifi_init: udp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp tx win: 5760[0m
+[0;32mI (655) wifi_init: tcp rx win: 5760[0m
+[0;32mI (655) wifi_init: tcp mss: 1440[0m
+[0;32mI (665) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (665) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (675) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (755) wifi:mode : sta (28:56:2f:77:a4:9c)[0m
+[0;32mI (755) wifi:enable tsf[0m
+[0;32mI (775) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (775) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (785) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (795) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (905) wifi:connected with ACT_0E41_5G, aid = 2, channel 10, BW20, bssid = b2:19:21:aa:0e:41[0m
+[0;32mI (905) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (905) wifi:pm start, type: 1[0m
+
+[0;32mI (905) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (915) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (935) wifi:<ba-add>idx:0 (ifx:0, b2:19:21:aa:0e:41), tid:0, ssn:3, winSize:64[0m
+[0;32mI (3055) esp_netif_handlers: sta ip: 192.168.0.106, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (3055) WIFI_MGR: Got IP: 192.168.0.106[0m
+[0;32mI (3055) EDGE_AI: TinyML Model Loaded! Arena Used: 656 bytes[0m
+[0;32mI (3085) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (3095) main_task: Returned from app_main()[0m
+[0;32mI (3095) HEALTH: Heap: 206932[0m
+[0;32mI (4105) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (5125) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (6145) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (7165) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (8185) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (9205) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (10225) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (11245) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (12265) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (13095) HEALTH: Heap: 212152[0m
+[0;32mI (13285) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (14305) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (15325) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (16345) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (17365) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (18385) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (19405) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (20425) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (21445) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (22465) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (23095) HEALTH: Heap: 211392[0m
+[0;32mI (23485) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (24505) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (25525) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (26545) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (27565) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (28585) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (29605) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (30625) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (31645) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (32665) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (33095) HEALTH: Heap: 212152[0m
+[0;33mW (33685) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (34705) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (35725) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (36745) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (37765) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (38785) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (39805) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (40825) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (41845) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (42865) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (43095) HEALTH: Heap: 209892[0m
+[0;32mI (43885) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (44905) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (45925) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (46945) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (47965) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (48985) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (50005) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (51025) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (52045) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (53065) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (53095) HEALTH: Heap: 208332[0m
+[0;32mI (54085) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (55105) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (56125) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (57145) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (58165) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (59185) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (60205) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (61225) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (62245) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (63095) HEALTH: Heap: 212160[0m
+[0;32mI (63265) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (64285) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (65305) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (66325) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (67345) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (68365) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (69385) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (70405) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (71425) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (72365) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (72445) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (73095) HEALTH: Heap: 209920[0m
+[0;32mI (73465) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (74485) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (75505) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (76525) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (77375) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (77545) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (78565) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (79585) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (80605) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (81625) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (82645) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (83095) HEALTH: Heap: 209920[0m
+[0;32mI (83665) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (84685) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (85705) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (86725) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (87745) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (88765) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (89785) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (90805) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (91825) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (92845) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (93095) HEALTH: Heap: 209628[0m
+[0;32mI (93865) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (94885) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (95905) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (96925) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (97945) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (98965) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (99985) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (101005) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (102025) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (103045) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (103095) HEALTH: Heap: 208360[0m
+[0;32mI (104065) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (105085) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (106105) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (107125) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (108145) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (109165) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (110185) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (111205) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (112225) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (113095) HEALTH: Heap: 212160[0m
+[0;32mI (113245) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (114265) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (115285) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (116305) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (117325) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (118345) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (119365) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (120385) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (121405) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (122425) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (123095) HEALTH: Heap: 212180[0m
+[0;32mI (123445) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (124465) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (125485) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (126505) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (127525) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (128545) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (129565) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (130585) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (131605) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (132625) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (133095) HEALTH: Heap: 208376[0m
+[0;32mI (133645) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (134665) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (135685) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (136705) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (137015) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (137025) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;33mW (137725) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (138745) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (139765) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (140785) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (141805) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (142825) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (143095) HEALTH: Heap: 205016[0m
+[0;33mW (143565) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (143845) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (144865) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (145885) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (146905) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (147925) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (148945) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (149965) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (150985) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (152005) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (153025) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (153095) HEALTH: Heap: 208356[0m
+[0;32mI (154045) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (155065) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (156085) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (157105) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (158125) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (159145) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (160165) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (161185) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (162205) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (163095) HEALTH: Heap: 209928[0m
+[0;32mI (163225) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (164165) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (164245) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (165265) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (166285) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (167305) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (168325) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (169345) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (170365) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (171385) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (172405) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (173095) HEALTH: Heap: 212172[0m
+[0;32mI (173425) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (174445) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (175465) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (176485) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (177505) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (178525) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (179545) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (180485) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (180565) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (181585) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (182605) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (183095) HEALTH: Heap: 209924[0m
+[0;32mI (183625) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (184645) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (185665) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (186685) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (187705) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (188725) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (189745) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (190765) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (191355) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (191785) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[1;31mE (192515) transport_base: tcp_read error, errno=Connection reset by peer[0m
+[1;31mE (192525) transport_base: tcp_read error, errno=Connection reset by peer[0m
+[1;31mE (192525) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (192525) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (192805) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (193095) HEALTH: Heap: 211372[0m
+[0;32mI (193825) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (194845) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (195865) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (196885) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[1;31mE (197545) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (197545) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (197545) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (197905) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (198925) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (199945) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (200965) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (201985) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (203005) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (203095) HEALTH: Heap: 208372[0m
+[0;33mW (203215) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (204025) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[1;31mE (204195) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (204205) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (205045) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (206065) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (207085) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (208105) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (209125) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (210145) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (211165) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (212185) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (213095) HEALTH: Heap: 208376[0m
+[0;32mI (213205) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (214225) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (215245) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (216265) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (216325) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (217195) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (217195) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (217285) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (218305) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (219325) MAIN_APP: Env: AI: Normal (State: 0)[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  7 2026 19:22:30[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21acch (137932) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=00031af4 vaddr=3ffb0000 size=03f34h ( 16180) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00035a30 vaddr=40080000 size=0a5e8h ( 42472) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a9c08h (695304) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e9c30 vaddr=4008a5e8 size=0da08h ( 55816) load[0m
+[0;32mI (418) esp_image: segment 5: paddr=000f7640 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (430) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (430) boot: Disabling RNG early entropy source...[0m
+[0;32mI (440) cpu_start: Multicore app[0m
+[0;32mI (449) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (449) cpu_start: Pro cpu start user code[0m
+[0;32mI (449) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (451) app_init: Application information:[0m
+[0;32mI (454) app_init: Project name:     iot_monitor[0m
+[0;32mI (459) app_init: App version:      fb470d1-dirty[0m
+[0;32mI (463) app_init: Compile time:     Feb  7 2026 19:06:53[0m
+[0;32mI (468) app_init: ELF file SHA256:  ecc5b3d50...[0m
+[0;32mI (473) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (478) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (482) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (486) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (490) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFB9B68 len 00026498 (153 KiB): DRAM[0m
+[0;32mI (506) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (512) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (517) heap_init: At 40098000 len 00008000 (32 KiB): IRAM[0m
+[0;33mW (524) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (535) spi_flash: detected chip: generic[0m
+[0;32mI (539) spi_flash: flash io: dio[0m
+[0;33mW (542) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (595) wifi:wifi driver task: 3ffc1bd8, prio:23, stack:6656, core=0[0m
+[0;32mI (605) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (605) wifi:wifi certification version: v7.0[0m
+[0;32mI (605) wifi:config NVS flash: enabled[0m
+[0;32mI (605) wifi:config nano formatting: disabled[0m
+[0;32mI (605) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (615) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (615) wifi:Init management short buffer num: 32[0m
+[0;32mI (625) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (625) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (635) wifi:Init static rx buffer num: 10[0m
+[0;32mI (635) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (635) wifi_init: rx ba win: 6[0m
+[0;32mI (645) wifi_init: accept mbox: 6[0m
+[0;32mI (645) wifi_init: tcpip mbox: 32[0m
+[0;32mI (645) wifi_init: udp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp tx win: 5760[0m
+[0;32mI (655) wifi_init: tcp rx win: 5760[0m
+[0;32mI (655) wifi_init: tcp mss: 1440[0m
+[0;32mI (665) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (665) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (675) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (755) wifi:mode : sta (28:56:2f:77:a4:9c)[0m
+[0;32mI (765) wifi:enable tsf[0m
+[0;32mI (775) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (775) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (785) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (795) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (905) wifi:connected with ACT_0E41_5G, aid = 2, channel 10, BW20, bssid = b2:19:21:aa:0e:41[0m
+[0;32mI (905) wifi:security: WPA2-PSK, phy: bgn, rssi: -66[0m
+[0;32mI (905) wifi:pm start, type: 1[0m
+
+[0;32mI (905) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (925) wifi:<ba-add>idx:0 (ifx:0, b2:19:21:aa:0e:41), tid:0, ssn:2, winSize:64[0m
+[0;32mI (955) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2445) esp_netif_handlers: sta ip: 192.168.0.106, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2445) WIFI_MGR: Got IP: 192.168.0.106[0m
+[0;32mI (2445) EDGE_AI: TinyML Model Loaded! Arena Used: 656 bytes[0m
+[0;32mI (2475) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (2485) main_task: Returned from app_main()[0m
+[0;32mI (2485) HEALTH: Heap: 206932[0m
+[0;32mI (3495) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (4515) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (5535) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (6555) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (7575) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (8595) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (9615) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (10635) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (11655) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (12485) HEALTH: Heap: 212152[0m
+[0;32mI (12675) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (13695) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (14715) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (15735) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (16755) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (17775) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (18795) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (19815) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (20835) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (21855) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (22485) HEALTH: Heap: 212152[0m
+[0;33mW (22875) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (23895) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (24915) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (25935) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (26955) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (27975) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (28995) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (30015) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (31035) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (32055) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (32485) HEALTH: Heap: 208332[0m
+[0;32mI (33075) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (34095) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (35115) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (36135) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (37155) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (38175) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (39195) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (40215) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (41235) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (42255) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (42485) HEALTH: Heap: 211588[0m
+[0;32mI (43275) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (44295) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (45315) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (46335) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (47355) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (48375) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (49395) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (50415) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (51435) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (52455) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (52485) HEALTH: Heap: 208332[0m
+[0;32mI (53475) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (54495) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (55515) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (56535) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (57555) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (58575) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (59595) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (60615) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (61635) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (62485) HEALTH: Heap: 212152[0m
+[0;32mI (62655) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (63675) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (64695) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (65715) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (66735) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (67755) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (68775) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (69795) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (70815) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (71835) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (72485) HEALTH: Heap: 212152[0m
+[0;32mI (72855) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (73875) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (74895) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (75915) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (76935) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (77955) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (78975) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (79995) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (81015) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (82035) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (82485) HEALTH: Heap: 209892[0m
+[0;32mI (83055) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (84075) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (85095) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (86115) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (87135) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (88155) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (89175) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (90195) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (91215) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (92235) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (92485) HEALTH: Heap: 212152[0m
+[0;32mI (93255) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (94275) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (95295) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (96315) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (97335) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (98355) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (99375) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (100395) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (101415) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (102435) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (102485) HEALTH: Heap: 212152[0m
+[0;32mI (103455) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (104475) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (105495) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (106515) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (107535) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (108555) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (109575) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (110595) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (111615) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (112485) HEALTH: Heap: 212152[0m
+[0;32mI (112635) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (113655) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (114675) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (115695) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (116715) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (117735) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (118755) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (119775) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (120795) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (121815) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (122485) HEALTH: Heap: 209920[0m
+[0;32mI (122835) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (123855) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (124875) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (125895) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (126915) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (127935) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (128315) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (128955) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (129375) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (129375) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;33mW (129975) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (130995) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (132015) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (132485) HEALTH: Heap: 209912[0m
+[0;32mI (133035) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (134055) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (135075) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (135925) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (136095) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (137115) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (138135) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (139155) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (140175) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (140935) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (141195) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (142215) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (142485) HEALTH: Heap: 209912[0m
+[0;32mI (143235) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (144255) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (145275) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (145945) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (146295) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (147315) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (148335) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (149355) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (150375) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (151395) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (152415) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (152485) HEALTH: Heap: 208340[0m
+[0;33mW (153435) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (154205) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (154455) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (155185) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (155185) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (155475) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (156495) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (157515) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (158535) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (159555) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (160575) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (161595) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (162465) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (162485) HEALTH: Heap: 209916[0m
+[0;32mI (162615) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (163635) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (164655) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (165675) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (166695) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (167475) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (167715) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (168735) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (169755) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (170775) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (171795) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (172485) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (172485) HEALTH: Heap: 210052[0m
+[0;32mI (172815) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (173835) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (174855) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (175875) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (176895) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (177495) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (177915) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (178935) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (179955) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (180975) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (181995) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (182485) HEALTH: Heap: 209916[0m
+[0;33mW (182505) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (183015) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (184035) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (185055) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (186075) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (187095) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (187515) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (188115) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (189135) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (190155) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (191175) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (192195) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (192485) HEALTH: Heap: 209916[0m
+[0;33mW (192525) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (193215) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (194235) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (195255) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (196275) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (197295) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (197535) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (198315) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (199335) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (200355) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (201375) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (202395) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (202485) HEALTH: Heap: 211620[0m
+[0;32mI (203415) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (204435) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (205455) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (206475) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (207495) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (208515) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (209455) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (209535) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[1;31mE (209765) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (209765) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (210555) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (211575) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (212485) HEALTH: Heap: 212184[0m
+[0;32mI (212595) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (213615) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (214635) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (215655) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (216675) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (217695) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (218715) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (219735) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (220755) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (221775) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (222485) HEALTH: Heap: 208364[0m
+[0;32mI (222795) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (223735) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (223815) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[1;31mE (223995) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (223995) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (224835) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (225855) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (226875) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (227895) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (228915) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (229735) transport_base: tcp_read error, errno=Connection reset by peer[0m
+[1;31mE (229735) transport_base: tcp_read error, errno=Connection reset by peer[0m
+[1;31mE (229735) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (229745) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (229935) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (230955) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (231975) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (232485) HEALTH: Heap: 209920[0m
+[0;33mW (232995) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (234015) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (235035) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (236055) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (237075) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (238095) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (239115) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (240135) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (241155) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (242175) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (242485) HEALTH: Heap: 208360[0m
+[0;32mI (243195) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (244215) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (245235) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (246255) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (247275) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (248295) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (249315) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (250335) MAIN_APP: Env: AI: Normal (State: 0)[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  7 2026 19:22:30[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21acch (137932) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=00031af4 vaddr=3ffb0000 size=03f34h ( 16180) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00035a30 vaddr=40080000 size=0a5e8h ( 42472) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a9c08h (695304) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e9c30 vaddr=4008a5e8 size=0da08h ( 55816) load[0m
+[0;32mI (418) esp_image: segment 5: paddr=000f7640 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (430) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (430) boot: Disabling RNG early entropy source...[0m
+[0;32mI (440) cpu_start: Multicore app[0m
+[0;32mI (449) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (449) cpu_start: Pro cpu start user code[0m
+[0;32mI (449) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (451) app_init: Application information:[0m
+[0;32mI (454) app_init: Project name:     iot_monitor[0m
+[0;32mI (459) app_init: App version:      fb470d1-dirty[0m
+[0;32mI (463) app_init: Compile time:     Feb  7 2026 19:06:53[0m
+[0;32mI (468) app_init: ELF file SHA256:  ecc5b3d50...[0m
+[0;32mI (473) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (478) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (482) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (486) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (490) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFB9B68 len 00026498 (153 KiB): DRAM[0m
+[0;32mI (506) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (512) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (517) heap_init: At 40098000 len 00008000 (32 KiB): IRAM[0m
+[0;33mW (524) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (535) spi_flash: detected chip: generic[0m
+[0;32mI (539) spi_flash: flash io: dio[0m
+[0;33mW (542) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (595) wifi:wifi driver task: 3ffc1bd8, prio:23, stack:6656, core=0[0m
+[0;32mI (605) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (605) wifi:wifi certification version: v7.0[0m
+[0;32mI (605) wifi:config NVS flash: enabled[0m
+[0;32mI (605) wifi:config nano formatting: disabled[0m
+[0;32mI (605) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (615) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (615) wifi:Init management short buffer num: 32[0m
+[0;32mI (625) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (625) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (635) wifi:Init static rx buffer num: 10[0m
+[0;32mI (635) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (635) wifi_init: rx ba win: 6[0m
+[0;32mI (645) wifi_init: accept mbox: 6[0m
+[0;32mI (645) wifi_init: tcpip mbox: 32[0m
+[0;32mI (645) wifi_init: udp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp tx win: 5760[0m
+[0;32mI (655) wifi_init: tcp rx win: 5760[0m
+[0;32mI (655) wifi_init: tcp mss: 1440[0m
+[0;32mI (665) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (665) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (675) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (755) wifi:mode : sta (28:56:2f:77:a4:9c)[0m
+[0;32mI (755) wifi:enable tsf[0m
+[0;32mI (775) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (775) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (785) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (795) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (905) wifi:connected with ACT_0E41_5G, aid = 2, channel 10, BW20, bssid = b2:19:21:aa:0e:41[0m
+[0;32mI (905) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (915) wifi:pm start, type: 1[0m
+
+[0;32mI (915) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (945) wifi:<ba-add>idx:0 (ifx:0, b2:19:21:aa:0e:41), tid:0, ssn:3, winSize:64[0m
+[0;32mI (985) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2455) esp_netif_handlers: sta ip: 192.168.0.106, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2455) WIFI_MGR: Got IP: 192.168.0.106[0m
+[0;32mI (2455) EDGE_AI: TinyML Model Loaded! Arena Used: 656 bytes[0m
+[0;32mI (2485) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (2495) main_task: Returned from app_main()[0m
+[0;32mI (2495) HEALTH: Heap: 206916[0m
+[0;32mI (3505) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (4525) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (5545) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (6565) MAIN_APP: Env: AI: Normal (State: 0)[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  7 2026 19:22:30[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21acch (137932) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=00031af4 vaddr=3ffb0000 size=03f34h ( 16180) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00035a30 vaddr=40080000 size=0a5e8h ( 42472) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a9c08h (695304) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e9c30 vaddr=4008a5e8 size=0da08h ( 55816) load[0m
+[0;32mI (418) esp_image: segment 5: paddr=000f7640 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (430) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (430) boot: Disabling RNG early entropy source...[0m
+[0;32mI (440) cpu_start: Multicore app[0m
+[0;32mI (449) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (449) cpu_start: Pro cpu start user code[0m
+[0;32mI (449) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (451) app_init: Application information:[0m
+[0;32mI (454) app_init: Project name:     iot_monitor[0m
+[0;32mI (459) app_init: App version:      fb470d1-dirty[0m
+[0;32mI (463) app_init: Compile time:     Feb  7 2026 19:06:53[0m
+[0;32mI (468) app_init: ELF file SHA256:  ecc5b3d50...[0m
+[0;32mI (473) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (478) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (482) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (486) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (490) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFB9B68 len 00026498 (153 KiB): DRAM[0m
+[0;32mI (506) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (512) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (517) heap_init: At 40098000 len 00008000 (32 KiB): IRAM[0m
+[0;33mW (524) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (535) spi_flash: detected chip: generic[0m
+[0;32mI (539) spi_flash: flash io: dio[0m
+[0;33mW (542) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (595) wifi:wifi driver task: 3ffc1bd8, prio:23, stack:6656, core=0[0m
+[0;32mI (605) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (605) wifi:wifi certification version: v7.0[0m
+[0;32mI (605) wifi:config NVS flash: enabled[0m
+[0;32mI (605) wifi:config nano formatting: disabled[0m
+[0;32mI (605) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (615) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (615) wifi:Init management short buffer num: 32[0m
+[0;32mI (625) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (625) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (635) wifi:Init static rx buffer num: 10[0m
+[0;32mI (635) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (635) wifi_init: rx ba win: 6[0m
+[0;32mI (645) wifi_init: accept mbox: 6[0m
+[0;32mI (645) wifi_init: tcpip mbox: 32[0m
+[0;32mI (645) wifi_init: udp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp tx win: 5760[0m
+[0;32mI (655) wifi_init: tcp rx win: 5760[0m
+[0;32mI (655) wifi_init: tcp mss: 1440[0m
+[0;32mI (665) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (665) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (675) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (755) wifi:mode : sta (28:56:2f:77:a4:9c)[0m
+[0;32mI (755) wifi:enable tsf[0m
+[0;32mI (775) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (775) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (785) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (795) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (905) wifi:connected with ACT_0E41_5G, aid = 2, channel 10, BW20, bssid = b2:19:21:aa:0e:41[0m
+[0;32mI (905) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (905) wifi:pm start, type: 1[0m
+
+[0;32mI (905) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (935) wifi:<ba-add>idx:0 (ifx:0, b2:19:21:aa:0e:41), tid:0, ssn:2, winSize:64[0m
+[0;32mI (945) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2445) esp_netif_handlers: sta ip: 192.168.0.106, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2445) WIFI_MGR: Got IP: 192.168.0.106[0m
+[0;32mI (2445) EDGE_AI: TinyML Model Loaded! Arena Used: 656 bytes[0m
+[0;32mI (2475) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (2485) main_task: Returned from app_main()[0m
+[0;32mI (2485) HEALTH: Heap: 206916[0m
+[0;32mI (3495) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (4515) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (5535) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (6555) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (7575) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (8595) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (9615) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (10635) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (11655) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (12485) HEALTH: Heap: 212136[0m
+[0;32mI (12675) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (13695) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (14715) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (15735) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (16755) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (17775) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (18795) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (19815) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (20835) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (21855) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (22485) HEALTH: Heap: 212136[0m
+[0;32mI (22875) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (23895) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (24915) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (25935) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (26955) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (27975) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (28995) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (30015) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (31035) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (32055) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (32485) HEALTH: Heap: 212136[0m
+[0;32mI (33075) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (34095) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (35115) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (36135) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (37155) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (38175) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (39195) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (40215) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (41235) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (42255) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (42485) HEALTH: Heap: 209904[0m
+[0;32mI (43275) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (44295) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (45315) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (46335) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (47355) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (48375) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (49395) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (50415) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (51435) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (52455) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (52485) HEALTH: Heap: 212136[0m
+[0;33mW (53475) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (54495) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (55515) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (56535) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (57555) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (58575) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (59595) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (60615) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (61635) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (62485) HEALTH: Heap: 212136[0m
+[0;32mI (62655) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (63675) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (64695) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (65715) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (66735) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (67755) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (68775) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (69795) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (70815) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (71835) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (72485) HEALTH: Heap: 212136[0m
+[0;32mI (72855) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (73875) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (74895) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (75915) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (76935) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (77955) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (78975) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (79995) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (81015) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (82035) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (82485) HEALTH: Heap: 212136[0m
+[0;32mI (83055) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (84075) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (85095) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (86115) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (87135) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (88155) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (89175) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (90195) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (91215) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (92235) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (92485) HEALTH: Heap: 209904[0m
+[0;32mI (93255) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (94275) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (95295) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (96315) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (97335) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (98355) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (99375) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (100395) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (101415) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (102435) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (102485) HEALTH: Heap: 208344[0m
+[0;32mI (103455) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (104475) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (105495) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (106515) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (107535) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (108555) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (109575) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (110595) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (111615) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (112485) HEALTH: Heap: 209904[0m
+[0;32mI (112635) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (113655) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (114595) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (114675) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (115695) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (116715) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (117735) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (118755) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (119775) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (120795) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (121815) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (122485) HEALTH: Heap: 211884[0m
+[0;32mI (122835) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (123855) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (124875) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (125895) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (126915) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (127935) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (128955) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (129975) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (130995) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (132015) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (132485) HEALTH: Heap: 209920[0m
+[0;33mW (133035) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (134055) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (135075) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (136095) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (137035) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (137115) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (138135) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (139155) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (140175) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (141195) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (142045) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (142215) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (142485) HEALTH: Heap: 209904[0m
+[0;32mI (143235) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (144255) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (145275) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (146295) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (147055) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (147315) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (148335) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (149355) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (150375) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (151395) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (152065) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (152415) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (152485) HEALTH: Heap: 209904[0m
+[0;32mI (153435) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (154455) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (155475) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (156495) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (157515) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (158535) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (159555) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (160575) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (160755) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (161595) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (162485) HEALTH: Heap: 209904[0m
+[0;32mI (162615) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (163635) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (164655) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (165675) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (165765) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (166695) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (167715) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (168735) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (169755) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (170775) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (170775) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (171795) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (172485) HEALTH: Heap: 209904[0m
+[0;32mI (172815) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (173835) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (174855) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (175785) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (175875) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (176895) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (177915) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (178935) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (179955) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (180975) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (181995) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (182485) HEALTH: Heap: 208360[0m
+[0;32mI (183015) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (184035) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (185055) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (186075) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (186855) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (187095) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[1;31mE (187835) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (187835) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (188115) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (189135) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (190155) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (191175) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (192195) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (192485) HEALTH: Heap: 208016[0m
+[0;32mI (193215) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (194235) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (195255) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (196275) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (197295) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (198315) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (198335) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (199335) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (200355) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (201375) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (202395) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (202485) HEALTH: Heap: 205012[0m
+[0;32mI (203415) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (204435) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (205455) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (206475) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (207335) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (207495) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (208515) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (209535) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (210555) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (211575) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (212485) HEALTH: Heap: 206580[0m
+[0;32mI (212595) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (213615) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (214635) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (215655) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (216675) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (217695) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (218715) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (219735) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (220755) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (221775) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (222485) HEALTH: Heap: 205012[0m
+[0;32mI (222795) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (223815) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (224835) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (225855) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (226875) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (227895) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (228915) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (229935) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (230425) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (230955) MAIN_APP: Env: AI: Normal (State: 0)[0m

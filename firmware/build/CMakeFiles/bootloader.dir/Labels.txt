@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Embedded_project/edge-ai-iot-monitor/firmware/build/CMakeFiles/bootloader
+C:/Embedded_project/edge-ai-iot-monitor/firmware/build/CMakeFiles/bootloader.rule
+C:/Embedded_project/edge-ai-iot-monitor/firmware/build/CMakeFiles/bootloader-complete.rule
+C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

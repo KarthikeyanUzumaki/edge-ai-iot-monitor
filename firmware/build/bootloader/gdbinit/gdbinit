@@ -1,0 +1,2 @@
+source C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader/gdbinit/symbols
+source C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader/gdbinit/connect

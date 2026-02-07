@@ -16,7 +16,8 @@
 // ====================================================
 // CONFIGURATION
 // ====================================================
-#define SERVER_URL "http://192.168.0.105:5000/data" // <--- CHECK IP
+// DIRECT LINK TO YOUR LAPTOP (Confirmed by Phone Test)
+#define SERVER_URL "http://192.168.0.105:5000/data"
 
 // PIN DEFINITIONS
 #define LED_PIN_G      GPIO_NUM_18  // GREEN (Normal)
@@ -97,10 +98,12 @@ void network_task(void *pvParameters) {
     char *post_buffer = NULL;
 
     esp_http_client_config_t config = {
-        .url = SERVER_URL,
-        .method = HTTP_METHOD_POST,
-        .timeout_ms = 5000,
-    };
+    .url = SERVER_URL,
+    .method = HTTP_METHOD_POST,
+    .timeout_ms = 10000,      // Wait 10 seconds (Fixed "Timeout" error)
+    .disable_auto_redirect = true,
+    .is_async = false
+};
     esp_http_client_handle_t client = esp_http_client_init(&config);
 
     while (1) {
@@ -109,7 +112,7 @@ void network_task(void *pvParameters) {
             cJSON *root = cJSON_CreateObject();
             cJSON_AddNumberToObject(root, "temp", package.temp);
             cJSON_AddNumberToObject(root, "hum", package.hum);
-            cJSON_AddNumberToObject(root, "risk_score", package.risk_score);
+            cJSON_AddNumberToObject(root, "risk_score", (int)(package.probability * 100));
             cJSON_AddStringToObject(root, "status_msg", package.message);
             cJSON_AddNumberToObject(root, "alert_level", (int)package.state); 
             cJSON_AddNumberToObject(root, "free_heap", esp_get_free_heap_size());

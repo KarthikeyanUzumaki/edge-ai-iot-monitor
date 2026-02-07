@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Espressif/frameworks/esp-idf-v5.5.2-2/components/bootloader/su
   file(MAKE_DIRECTORY "C:/Espressif/frameworks/esp-idf-v5.5.2-2/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/bootloader"
-  "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/bootloader-prefix"
-  "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/bootloader-prefix/tmp"
-  "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src"
-  "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader"
+  "C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix"
+  "C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/tmp"
+  "C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src"
+  "C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Embedded_project/edge-ai-iot-monitor/firmware/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

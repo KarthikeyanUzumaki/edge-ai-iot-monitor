@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef enum {
     STATE_NORMAL = 0,
     STATE_WARNING = 1,
@@ -12,7 +16,7 @@ typedef enum {
 typedef struct {
     float temp;
     float hum;
-    float probability;    // Confidence (0.0 to 1.0)
+    float probability;    // <--- This replaced risk_score
     system_state_t state; 
     char message[32];
 } inference_result_t;
@@ -22,5 +26,9 @@ void ai_init(void);
 
 // Run inference
 inference_result_t analyze_environment(float temp, float hum);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

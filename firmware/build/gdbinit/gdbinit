@@ -1,2 +1,2 @@
-source C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/gdbinit/symbols
-source C:/Users/karth/OneDrive/Desktop/edge-ai-iot-monitor/firmware/build/gdbinit/connect
+source C:/Embedded_project/edge-ai-iot-monitor/firmware/build/gdbinit/symbols
+source C:/Embedded_project/edge-ai-iot-monitor/firmware/build/gdbinit/connect

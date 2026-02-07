@@ -1,0 +1,677 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Embedded_project\edge-ai-iot-monitor\firmware\build\iot_monitor.elf C:\Embedded_project\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py'
+  : DIO
+[0;32mI (40) boot.esp�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  7 2026 19:22:30[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21abch (137916) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=00031ae4 vaddr=3ffb0000 size=03f34h ( 16180) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00035a20 vaddr=40080000 size=0a5f8h ( 42488) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a9c0ch (695308) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e9c34 vaddr=4008a5f8 size=0d9f8h ( 55800) load[0m
+[0;32mI (418) esp_image: segment 5: paddr=000f7634 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (430) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (430) boot: Disabling RNG early entropy source...[0m
+[0;32mI (440) cpu_start: Multicore app[0m
+[0;32mI (448) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (449) cpu_start: Pro cpu start user code[0m
+[0;32mI (449) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (451) app_init: Application information:[0m
+[0;32mI (454) app_init: Project name:     iot_monitor[0m
+[0;32mI (459) app_init: App version:      fb470d1-dirty[0m
+[0;32mI (463) app_init: Compile time:     Feb  7 2026 19:06:53[0m
+[0;32mI (468) app_init: ELF file SHA256:  0bc520c09...[0m
+[0;32mI (472) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (478) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (482) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (486) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (490) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFB9B68 len 00026498 (153 KiB): DRAM[0m
+[0;32mI (506) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (512) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (517) heap_init: At 40098000 len 00008000 (32 KiB): IRAM[0m
+[0;33mW (524) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (535) spi_flash: detected chip: generic[0m
+[0;32mI (539) spi_flash: flash io: dio[0m
+[0;33mW (542) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (595) wifi:wifi driver task: 3ffc1bd8, prio:23, stack:6656, core=0[0m
+[0;32mI (605) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (605) wifi:wifi certification version: v7.0[0m
+[0;32mI (605) wifi:config NVS flash: enabled[0m
+[0;32mI (605) wifi:config nano formatting: disabled[0m
+[0;32mI (605) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (615) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (615) wifi:Init management short buffer num: 32[0m
+[0;32mI (625) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (625) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (635) wifi:Init static rx buffer num: 10[0m
+[0;32mI (635) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (635) wifi_init: rx ba win: 6[0m
+[0;32mI (645) wifi_init: accept mbox: 6[0m
+[0;32mI (645) wifi_init: tcpip mbox: 32[0m
+[0;32mI (645) wifi_init: udp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp tx win: 5760[0m
+[0;32mI (655) wifi_init: tcp rx win: 5760[0m
+[0;32mI (655) wifi_init: tcp mss: 1440[0m
+[0;32mI (665) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (665) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (675) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (755) wifi:mode : sta (28:56:2f:77:a4:9c)[0m
+[0;32mI (755) wifi:enable tsf[0m
+[0;32mI (775) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (775) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (785) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (795) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (905) wifi:connected with ACT_0E41_5G, aid = 2, channel 10, BW20, bssid = b2:19:21:aa:0e:41[0m
+[0;32mI (905) wifi:security: WPA2-PSK, phy: bgn, rssi: -64[0m
+[0;32mI (905) wifi:pm start, type: 1[0m
+
+[0;32mI (905) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (935) wifi:<ba-add>idx:0 (ifx:0, b2:19:21:aa:0e:41), tid:0, ssn:3, winSize:64[0m
+[0;32mI (965) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2435) esp_netif_handlers: sta ip: 192.168.0.106, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2435) WIFI_MGR: Got IP: 192.168.0.106[0m
+[0;32mI (2435) EDGE_AI: TinyML Model Loaded! Arena Used: 656 bytes[0m
+[0;32mI (2465) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (2475) main_task: Returned from app_main()[0m
+[0;32mI (2475) HEALTH: Heap: 206920[0m
+[0;32mI (3485) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (4505) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (5525) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (6545) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (7565) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (8585) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (9605) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (10625) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (11645) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (12475) HEALTH: Heap: 212140[0m
+[0;32mI (12665) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (13685) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (14705) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (15725) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (16745) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (17765) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (18785) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (19805) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (20825) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (21845) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (22475) HEALTH: Heap: 212140[0m
+[0;32mI (22865) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (23885) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (24905) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (25925) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (26945) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (27965) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (28985) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (30005) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (31025) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (32045) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (32475) HEALTH: Heap: 212140[0m
+[0;32mI (33065) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (34085) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (35105) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (36125) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (37145) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (38165) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (39185) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (40205) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (41225) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (42245) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (42475) HEALTH: Heap: 209880[0m
+[0;32mI (43265) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (44285) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (45305) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (46325) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (47345) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (48365) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (49385) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (50405) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (51425) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (52445) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (52475) HEALTH: Heap: 208320[0m
+[0;32mI (53465) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (54485) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (55505) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (56525) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (57545) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (58565) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (59585) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (60605) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (61625) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (62475) HEALTH: Heap: 212148[0m
+[0;32mI (62645) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (63665) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (64685) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (65705) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (66725) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (67745) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (68765) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (69785) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (70805) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (71825) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (72475) HEALTH: Heap: 212148[0m
+[0;33mW (72845) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (73865) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (74885) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (75905) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (76925) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (77945) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (78965) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (79985) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (81005) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (82025) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (82475) HEALTH: Heap: 212148[0m
+[0;32mI (83045) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (84065) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (85085) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (86105) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (87125) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (88145) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (89165) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (90185) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (91205) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (92225) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (92475) HEALTH: Heap: 211952[0m
+[0;32mI (93245) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (94265) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (95285) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (96305) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (97325) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (98345) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (99365) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (100385) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (101405) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (102425) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (102475) HEALTH: Heap: 208340[0m
+[0;32mI (103445) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (104465) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (105485) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (106505) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (107525) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (108545) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (109565) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (110585) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (111605) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (112475) HEALTH: Heap: 208340[0m
+[0;32mI (112625) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (113645) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (114665) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[1;31mE (115145) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (115145) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (115685) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (116705) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (117725) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (118745) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (119765) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (120785) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (121805) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (122475) HEALTH: Heap: 208356[0m
+[0;32mI (122825) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (123845) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (124865) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (125885) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (126905) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (127925) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (128945) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (129965) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (130985) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (132005) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (132475) HEALTH: Heap: 211956[0m
+[0;32mI (133025) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (134045) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (135065) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (136085) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (137105) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (138125) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (139145) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (140165) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (141185) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (142205) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (142475) HEALTH: Heap: 208340[0m
+[0;32mI (143225) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (144245) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (145265) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (146285) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (147305) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (148325) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[1;31mE (148325) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (148325) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (149345) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (150365) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (151385) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (152405) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (152475) HEALTH: Heap: 208332[0m
+[0;32mI (153425) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (154445) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (155465) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (156485) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (157505) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (158525) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (159545) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[1;31mE (159795) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (159795) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (160565) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (161585) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (162475) HEALTH: Heap: 208348[0m
+[0;32mI (162605) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (163625) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (164645) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (165665) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (166685) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (167705) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (168725) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (169745) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (170175) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (170765) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (171785) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (172475) HEALTH: Heap: 208360[0m
+[0;32mI (172805) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (173825) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (174845) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (175865) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (176885) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (177905) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (178925) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (179945) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (180185) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (180965) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[1;31mE (181305) transport_base: tcp_read error, errno=Connection reset by peer[0m
+[1;31mE (181305) transport_base: tcp_read error, errno=Connection reset by peer[0m
+[1;31mE (181315) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (181315) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (181985) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (182475) HEALTH: Heap: 211360[0m
+[0;32mI (183005) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (184025) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (185045) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (186065) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (187085) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (188105) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (189125) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (190145) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (191165) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (192185) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (192475) HEALTH: Heap: 208360[0m
+[0;32mI (193205) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (194225) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (194245) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (195245) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (196265) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (197285) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (198305) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (199325) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (200345) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (201365) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (202385) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (202475) HEALTH: Heap: 208360[0m
+[0;33mW (203405) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (204255) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (204425) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (205445) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (206465) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (207485) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (208505) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (209525) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (210545) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (211565) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (212475) HEALTH: Heap: 208360[0m
+[0;32mI (212585) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (213605) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (214265) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (214625) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (215645) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (216665) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (217685) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (218705) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (219725) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (220745) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (221765) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (222475) HEALTH: Heap: 208360[0m
+[0;32mI (222785) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (223805) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (224275) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (224825) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (225845) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (226865) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (227885) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (228905) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (229925) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (230945) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (231965) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (232475) HEALTH: Heap: 208360[0m
+[0;32mI (232985) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (234005) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (234285) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (235025) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (236045) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (237065) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (238085) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (239105) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (240125) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (241145) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (242165) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (242475) HEALTH: Heap: 209920[0m
+[0;32mI (243185) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (244205) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (244295) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (245225) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (246245) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (247265) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (248285) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (249305) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (250325) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (251345) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (252365) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (252475) HEALTH: Heap: 209920[0m
+[0;33mW (253385) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (254305) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (254405) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (255425) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (256445) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (257465) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (258485) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (259505) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (260525) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (261545) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (262475) HEALTH: Heap: 209920[0m
+[0;32mI (262565) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (263585) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (264315) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (264605) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (265625) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (266645) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (267665) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (268685) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (269705) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (270725) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (271745) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (272475) HEALTH: Heap: 209920[0m
+[0;32mI (272765) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (273785) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (274325) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (274805) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (275825) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (276845) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (277865) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (278885) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (279905) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (280925) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (281945) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (282475) HEALTH: Heap: 209920[0m
+[0;32mI (282965) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (283985) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (284335) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (285005) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (286025) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (287045) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (288065) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (289085) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (290105) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (291125) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (292145) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (292475) HEALTH: Heap: 209920[0m
+[0;32mI (293165) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (294185) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (294345) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (295205) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (296225) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (297245) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (298265) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (299285) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (300305) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (301325) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (302345) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (302475) HEALTH: Heap: 208360[0m
+[0;32mI (303365) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (304385) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[1;31mE (305205) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (305205) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (305405) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (306425) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (307445) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (308465) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (309485) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (310505) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (311525) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (312475) HEALTH: Heap: 208828[0m
+[0;32mI (312545) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (313565) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (314585) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (315605) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (316625) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (317645) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (318665) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (319685) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (320705) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (321725) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (322475) HEALTH: Heap: 212160[0m
+[0;32mI (322745) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (323765) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (324785) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (325805) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (326825) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (327845) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (328865) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (329885) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (330905) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (331925) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (332475) HEALTH: Heap: 212160[0m
+[0;32mI (332945) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;33mW (333965) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (334985) MAIN_APP: Env: AI: Normal (State: 0)[0m
+[0;32mI (336005) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (337025) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (338045) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (339065) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (340085) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (341105) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (342125) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (342475) HEALTH: Heap: 209920[0m
+[0;32mI (343145) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (344165) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (345185) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (346205) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (347225) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (348245) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (349265) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (350285) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (351305) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (352325) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (352475) HEALTH: Heap: 208360[0m
+[0;32mI (353345) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (354365) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (355385) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (356405) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (357425) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (358445) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (359465) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (360485) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (361505) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (362475) HEALTH: Heap: 212160[0m
+[0;32mI (362525) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (363545) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (364565) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (365585) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (366605) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (367625) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (368645) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (369665) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (370685) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (371705) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (372475) HEALTH: Heap: 212160[0m
+[0;32mI (372725) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (373745) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (374765) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (375785) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (376805) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (377825) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (378845) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (379865) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (380885) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (381905) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (382475) HEALTH: Heap: 208360[0m
+[0;33mW (382925) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (383945) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (384965) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (385985) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (387005) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (388025) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (389045) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (390065) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (391085) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (392105) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (392475) HEALTH: Heap: 211964[0m
+[0;32mI (393125) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (394145) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (395165) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (396185) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (397205) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (398225) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[1;31mE (398495) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (398495) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (399245) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (400265) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (401285) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (402305) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (402475) HEALTH: Heap: 208348[0m
+[0;32mI (403325) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (404345) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (405365) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (406385) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (407405) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (408425) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (409445) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (410465) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (411485) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (412475) HEALTH: Heap: 212164[0m
+[0;32mI (412505) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (413525) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (414545) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (415565) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (416585) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (417605) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (418625) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (419645) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (420665) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (421685) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (422475) HEALTH: Heap: 212164[0m
+[0;32mI (422705) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (423725) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (424745) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (425765) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (426785) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (427805) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (428825) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (429845) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (430865) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (431885) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (432475) HEALTH: Heap: 211352[0m
+[0;32mI (432905) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (433925) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (434945) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (435965) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (436985) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (438005) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (439025) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (440045) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (441065) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (442085) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (442475) HEALTH: Heap: 211888[0m
+[0;32mI (443105) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (444125) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (445145) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (446165) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (447185) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (448205) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (449225) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (450245) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (451265) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (452285) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (452475) HEALTH: Heap: 208348[0m
+[0;32mI (453305) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (454325) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (455345) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (456365) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[1;31mE (456655) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (456655) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (457385) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (458405) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (459425) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (460445) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (461465) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (462475) HEALTH: Heap: 208348[0m
+[0;33mW (462485) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (463505) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (464525) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (465545) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (466565) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (467585) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (468605) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (469625) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (470645) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (471665) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (472475) HEALTH: Heap: 212160[0m
+[0;32mI (472685) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (473705) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (474725) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (475745) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (476765) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (477785) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (478805) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (479825) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (480845) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (481865) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (482475) HEALTH: Heap: 211352[0m
+[0;32mI (482885) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (483905) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (484925) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (485945) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (486965) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (487985) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;33mW (489005) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (490025) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (491045) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (492065) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (492475) HEALTH: Heap: 212160[0m
+[0;32mI (493085) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (494105) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (495125) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (496145) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (497165) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (498185) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (499205) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (500225) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (501245) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (502265) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (502475) HEALTH: Heap: 208348[0m
+[0;32mI (503285) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (504305) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (505325) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (506345) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (507365) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (508385) MAIN_APP: Env: AI: Warning (State: 1)[0m
+[0;32mI (5094

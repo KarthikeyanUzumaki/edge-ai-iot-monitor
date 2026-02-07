@@ -1,0 +1,530 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Embedded_project\edge-ai-iot-monitor\firmware\build\iot_monitor.elf C:\Embedded_project\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py'
+IO
+[0;32mI (40) boot.esp32: SPI F�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  7 2026 19:22:30[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2173ch (137020) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=00031764 vaddr=3ffb0000 size=03f34h ( 16180) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=000356a0 vaddr=40080000 size=0a978h ( 43384) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a9c08h (695304) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e9c30 vaddr=4008a978 size=0d678h ( 54904) load[0m
+[0;32mI (417) esp_image: segment 5: paddr=000f72b0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (429) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (429) boot: Disabling RNG early entropy source...[0m
+[0;32mI (440) cpu_start: Multicore app[0m
+[0;32mI (448) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (448) cpu_start: Pro cpu start user code[0m
+[0;32mI (449) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (450) app_init: Application information:[0m
+[0;32mI (454) app_init: Project name:     iot_monitor[0m
+[0;32mI (458) app_init: App version:      fb470d1-dirty[0m
+[0;32mI (463) app_init: Compile time:     Feb  7 2026 19:06:53[0m
+[0;32mI (468) app_init: ELF file SHA256:  8b11083f4...[0m
+[0;32mI (472) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (478) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (481) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (485) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (490) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (501) heap_init: At 3FFB9B68 len 00026498 (153 KiB): DRAM[0m
+[0;32mI (506) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (511) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (517) heap_init: At 40098000 len 00008000 (32 KiB): IRAM[0m
+[0;33mW (523) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (535) spi_flash: detected chip: generic[0m
+[0;32mI (539) spi_flash: flash io: dio[0m
+[0;33mW (542) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (595) wifi:wifi driver task: 3ffc1bd8, prio:23, stack:6656, core=0[0m
+[0;32mI (605) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (605) wifi:wifi certification version: v7.0[0m
+[0;32mI (605) wifi:config NVS flash: enabled[0m
+[0;32mI (605) wifi:config nano formatting: disabled[0m
+[0;32mI (605) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (615) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (615) wifi:Init management short buffer num: 32[0m
+[0;32mI (625) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (625) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (635) wifi:Init static rx buffer num: 10[0m
+[0;32mI (635) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (635) wifi_init: rx ba win: 6[0m
+[0;32mI (645) wifi_init: accept mbox: 6[0m
+[0;32mI (645) wifi_init: tcpip mbox: 32[0m
+[0;32mI (645) wifi_init: udp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp mbox: 6[0m
+[0;32mI (655) wifi_init: tcp tx win: 5760[0m
+[0;32mI (655) wifi_init: tcp rx win: 5760[0m
+[0;32mI (655) wifi_init: tcp mss: 1440[0m
+[0;32mI (665) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (665) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (675) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (755) wifi:mode : sta (28:56:2f:77:a4:9c)[0m
+[0;32mI (765) wifi:enable tsf[0m
+[0;32mI (775) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (775) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (785) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (795) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (905) wifi:connected with ACT_0E41_5G, aid = 2, channel 10, BW20, bssid = b2:19:21:aa:0e:41[0m
+[0;32mI (905) wifi:security: WPA2-PSK, phy: bgn, rssi: -66[0m
+[0;32mI (915) wifi:pm start, type: 1[0m
+
+[0;32mI (915) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (935) wifi:<ba-add>idx:0 (ifx:0, b2:19:21:aa:0e:41), tid:0, ssn:2, winSize:64[0m
+[0;32mI (965) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2445) esp_netif_handlers: sta ip: 192.168.0.106, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2445) WIFI_MGR: Got IP: 192.168.0.106[0m
+[1;31mE (2445) EDGE_AI: Model schema mismatch![0m
+[0;32mI (2465) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (2485) main_task: Returned from app_main()[0m
+[0;32mI (2485) HEALTH: Heap: 207116[0m
+[0;32mI (3495) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (4515) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (5535) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (6555) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (7485) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (7485) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (7485) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (7575) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (8595) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (9615) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (10635) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (11655) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (12485) HEALTH: Heap: 211580[0m
+[1;31mE (12505) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (12505) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (12505) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (12675) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (13695) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (14715) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (15735) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (16755) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (17525) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (17525) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (17525) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (17775) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (18795) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (19815) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (20835) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (21855) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (22485) HEALTH: Heap: 211580[0m
+[1;31mE (22545) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (22545) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (22545) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (22875) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (23895) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (24915) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (25935) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (26955) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (27565) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (27565) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (27565) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (27975) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (28995) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (30015) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (31035) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (32055) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (32485) HEALTH: Heap: 211580[0m
+[1;31mE (32585) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (32585) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (32585) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (33075) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (34095) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (35115) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (36135) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (37155) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (37605) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (37605) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (37605) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (38175) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (39195) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (40215) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (41235) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (42255) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (42485) HEALTH: Heap: 211580[0m
+[1;31mE (42625) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (42625) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (42625) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (43275) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (44295) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (45315) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (46335) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (47355) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (47645) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (47645) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (47645) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (48375) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (49395) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (50415) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (51435) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (52455) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (52485) HEALTH: Heap: 211580[0m
+[1;31mE (52665) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (52665) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (52665) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (53475) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (54495) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (55515) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (56535) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (57555) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (57685) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (57685) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (57685) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (58575) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (59595) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (60615) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (61635) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (62485) HEALTH: Heap: 211580[0m
+[0;32mI (62655) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (62705) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (62705) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (62705) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (63675) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (64695) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (65715) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (66735) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (67725) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (67725) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (67725) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (67755) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (68775) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (69795) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (70815) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (71835) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (72485) HEALTH: Heap: 211580[0m
+[1;31mE (72765) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (72765) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (72765) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (72855) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (73875) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (74895) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (75915) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (76935) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (77785) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (77785) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (77785) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (77955) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (78975) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (79995) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (81015) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (82035) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (82485) HEALTH: Heap: 211580[0m
+[1;31mE (82805) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (82805) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (82805) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (83055) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (84075) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (85095) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (86115) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (87135) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (87825) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (87825) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (87825) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (88155) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (89175) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (90195) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (91215) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (92235) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (92485) HEALTH: Heap: 211580[0m
+[1;31mE (92845) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (92845) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (92845) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (93255) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (94275) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (95295) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (96315) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (97335) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (97865) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (97865) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (97865) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (98355) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (99375) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (100395) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (101415) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (102435) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (102485) HEALTH: Heap: 211580[0m
+[1;31mE (102885) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (102885) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (102885) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (103455) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (104475) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (105495) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (106515) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (107535) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (107905) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (107905) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (107905) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (108555) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (109575) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (110595) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (111615) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (112485) HEALTH: Heap: 211580[0m
+[0;32mI (112635) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (112925) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (112925) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (112925) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (113655) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (114675) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (115695) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (116715) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (117735) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (117945) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (117945) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (117945) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (118755) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (119775) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (120795) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (121815) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (122485) HEALTH: Heap: 211600[0m
+[0;32mI (122835) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (122965) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (122965) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (122965) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (123855) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (124875) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (125895) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (126915) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (127935) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (127985) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (127985) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (127985) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (128955) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (129975) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (130995) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (132015) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (132485) HEALTH: Heap: 211600[0m
+[1;31mE (133005) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (133005) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (133005) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (133035) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (134055) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (135075) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (136095) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (137115) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (138045) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (138045) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (138045) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (138135) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (139155) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (140175) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (141195) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (142215) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (142485) HEALTH: Heap: 211584[0m
+[1;31mE (143065) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (143065) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (143065) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (143235) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (144255) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (145275) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (146295) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (147315) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (148085) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (148085) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (148085) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (148335) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (149355) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (150375) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (151395) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (152415) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (152485) HEALTH: Heap: 211600[0m
+[1;31mE (153105) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (153105) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (153105) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (153435) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (154455) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (155475) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (156495) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (157515) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (158125) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (158125) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (158125) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (158535) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (159555) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (160575) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (161595) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (162485) HEALTH: Heap: 211600[0m
+[0;32mI (162615) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (163145) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (163145) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (163145) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (163635) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (164655) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (165675) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (166695) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (167715) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (168165) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (168165) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (168165) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (168735) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (169755) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (170775) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (171795) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (172485) HEALTH: Heap: 211600[0m
+[0;32mI (172815) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (173185) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (173185) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (173185) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (173835) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (174855) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (175875) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (176895) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (177915) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (178205) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (178205) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (178205) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (178935) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (179955) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (180975) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (181995) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (182485) HEALTH: Heap: 211600[0m
+[0;32mI (183015) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (183225) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (183225) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (183225) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (184035) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (185055) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (186075) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (187095) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (188115) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (188245) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (188245) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (188245) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (189135) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (190155) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (191175) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (192195) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (192485) HEALTH: Heap: 211600[0m
+[0;32mI (193215) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (193265) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (193265) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (193265) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (194235) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (195255) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (196275) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (197295) MAIN_APP: Sensor Read Error: -2[0m
+[1;31mE (198285) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (198285) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (198285) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (198315) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (199335) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (200355) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (201375) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (202395) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (202485) HEALTH: Heap: 211600[0m
+[1;31mE (203325) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (203325) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (203325) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (203415) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (204435) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (205455) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (206475) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (207495) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (208345) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (208345) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (208345) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (208515) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (209535) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (210555) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (211575) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (212485) HEALTH: Heap: 211600[0m
+[0;32mI (212595) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (213365) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (213365) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (213365) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (213615) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (214635) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (215655) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (216675) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (217695) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (218385) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (218385) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (218385) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (218715) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (219735) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (220755) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (221775) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (222485) HEALTH: Heap: 211600[0m
+[0;32mI (222795) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (223405) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (223405) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (223405) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (223815) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (224835) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (225855) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (226875) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (227895) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (228425) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (228425) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (228425) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;33mW (228915) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (229935) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (230955) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (231975) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (232485) HEALTH: Heap: 211600[0m
+[0;32mI (232995) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (233445) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (233445) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (233445) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (234015) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (235035) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (236055) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (237075) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (238095) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (238465) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (238465) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (238465) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (239115) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (240135) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (241155) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (242175) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (242485) HEALTH: Heap: 211600[0m
+[0;32mI (243195) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (243485) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (243485) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (243485) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (244215) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (245235) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (246255) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (247275) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (248295) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (248505) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (248505) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (248505) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (249315) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (250335) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (251355) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (252375) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (252485) HEALTH: Heap: 211600[0m
+[0;32mI (253395) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (253525) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (253525) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (253525) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (254415) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (255435) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;33mW (256455) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (257475) MAIN_APP: Env: AI Error (State: 0)[0m
+[0;32mI (258495) MAIN_APP: Env: AI Error (State: 0)[0m
+[1;31mE (258545) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (258545) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (258545) HTTP_CLIENT: Connection failed, sock < 0[0m
