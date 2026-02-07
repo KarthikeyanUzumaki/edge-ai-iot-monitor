@@ -1,0 +1,1736 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\iot_monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\edge-ai-iot-monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py' '-p' 'COM5'
+�: DIO
+[0;32mI (40) boot.esp3�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e694h (124564) map[0m
+[0;32mI (130) esp_image: segment 1: paddr=0002e6bc vaddr=3ffb0000 size=0195ch (  6492) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a1130h (659760) map[0m
+[0;32mI (360) esp_image: segment 3: paddr=000d1158 vaddr=3ffb195c size=025d8h (  9688) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000d3738 vaddr=40080000 size=17ff0h ( 98288) load[0m
+[0;32mI (402) esp_image: segment 5: paddr=000eb730 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (414) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (414) boot: Disabling RNG early entropy source...[0m
+[0;32mI (424) cpu_start: Multicore app[0m
+[0;32mI (433) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (433) cpu_start: Pro cpu start user code[0m
+[0;32mI (433) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (435) app_init: Application information:[0m
+[0;32mI (439) app_init: Project name:     iot_monitor[0m
+[0;32mI (443) app_init: App version:      0e0dffd-dirty[0m
+[0;32mI (447) app_init: Compile time:     Feb  7 2026 13:34:45[0m
+[0;32mI (452) app_init: ELF file SHA256:  72b9862f0...[0m
+[0;32mI (457) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (462) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (466) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (470) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (474) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (480) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (485) heap_init: At 3FFB8840 len 000277C0 (157 KiB): DRAM[0m
+[0;32mI (490) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (496) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (501) heap_init: At 40098000 len 00008000 (32 KiB): IRAM[0m
+[0;33mW (508) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (520) spi_flash: detected chip: generic[0m
+[0;32mI (523) spi_flash: flash io: dio[0m
+[0;33mW (526) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (539) main_task: Started on CPU0[0m
+[0;32mI (549) main_task: Calling app_main()[0m
+[0;32mI (579) wifi:wifi driver task: 3ffc08b0, prio:23, stack:6656, core=0[0m
+[0;32mI (589) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (589) wifi:wifi certification version: v7.0[0m
+[0;32mI (589) wifi:config NVS flash: enabled[0m
+[0;32mI (589) wifi:config nano formatting: disabled[0m
+[0;32mI (589) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (599) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (599) wifi:Init management short buffer num: 32[0m
+[0;32mI (609) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (609) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (619) wifi:Init static rx buffer num: 10[0m
+[0;32mI (619) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (619) wifi_init: rx ba win: 6[0m
+[0;32mI (629) wifi_init: accept mbox: 6[0m
+[0;32mI (629) wifi_init: tcpip mbox: 32[0m
+[0;32mI (629) wifi_init: udp mbox: 6[0m
+[0;32mI (639) wifi_init: tcp mbox: 6[0m
+[0;32mI (639) wifi_init: tcp tx win: 5760[0m
+[0;32mI (639) wifi_init: tcp rx win: 5760[0m
+[0;32mI (639) wifi_init: tcp mss: 1440[0m
+[0;32mI (649) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (649) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (659) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (739) wifi:mode : sta (28:56:2f:77:a4:9c)[0m
+[0;32mI (739) wifi:enable tsf[0m
+[0;32mI (759) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (759) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (769) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (779) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (889) wifi:connected with ACT_0E41_5G, aid = 2, channel 10, BW20, bssid = b2:19:21:aa:0e:41[0m
+[0;32mI (889) wifi:security: WPA2-PSK, phy: bgn, rssi: -69[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (919) wifi:<ba-add>idx:0 (ifx:0, b2:19:21:aa:0e:41), tid:0, ssn:2, winSize:64[0m
+[0;32mI (949) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2429) esp_netif_handlers: sta ip: 192.168.0.106, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2429) WIFI_MGR: Got IP: 192.168.0.106[0m
+[0;32mI (2449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (2459) main_task: Returned from app_main()[0m
+[0;32mI (2459) HEALTH: Heap: 212312[0m
+[0;32mI (3469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (4489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (5509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (6529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (7549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (8569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (9509) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (9589) MAIN_APP: Env: Nominal (State: 0)[0m
+[1;31mE (9609) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (9609) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;33mW (10609) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (11629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (12459) HEALTH: Heap: 210072[0m
+[0;32mI (12649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (13669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (14689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (15709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (16729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (16889) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (17749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (18769) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (19789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (20809) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (21829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (21899) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (22459) HEALTH: Heap: 211660[0m
+[0;32mI (22849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (23869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (24889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (25909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (26929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (27949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (28969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (29989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (31009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (32029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (32459) HEALTH: Heap: 216964[0m
+[0;32mI (33049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (34069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (35089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (36109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (37129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (38149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (39169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (40189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (41209) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (42229) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (42459) HEALTH: Heap: 213416[0m
+[0;33mW (43169) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (43249) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (43359) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (43359) HTTP_CLIENT: Close connection due to FIN received[0m
+[1;31mE (44269) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[0;33mW (45289) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (46309) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (47329) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (48349) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (49369) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (50389) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (51409) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (52429) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[0;32mI (52459) HEALTH: Heap: 210060[0m
+[1;31mE (53449) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (54469) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (55489) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[0;33mW (56419) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (56509) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (56659) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (56659) HTTP_CLIENT: Close connection due to FIN received[0m
+[1;31mE (57529) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (58549) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (59569) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (60589) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (61609) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[0;32mI (62459) HEALTH: Heap: 210064[0m
+[1;31mE (62629) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (63649) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (64669) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (65689) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (66709) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[0;33mW (67729) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (68749) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (69769) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (69799) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (70789) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (70809) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (70809) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (71809) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (72459) HEALTH: Heap: 213052[0m
+[0;33mW (72829) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (73849) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (74869) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (75889) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (76909) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (77929) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (78759) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (78949) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (79969) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (80989) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (82009) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (82459) HEALTH: Heap: 210068[0m
+[0;32mI (83029) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (83769) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (84049) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (85069) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (86089) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (87109) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (88129) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (89149) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (90169) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (91189) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (92209) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (92459) HEALTH: Heap: 213404[0m
+[0;33mW (92969) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (93229) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (94249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (95269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (96289) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (97309) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (97979) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (98329) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (99349) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (100369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (101389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (102409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (102459) HEALTH: Heap: 213404[0m
+[0;33mW (102989) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (103429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (104449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (105469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (106489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (107509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (107999) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (108529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (109549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (110569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (111589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (112459) HEALTH: Heap: 213404[0m
+[0;32mI (112609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (113009) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (113629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (114649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (115669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (116689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (117709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (118019) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (118729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (119749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (120769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (121789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (122459) HEALTH: Heap: 217256[0m
+[0;33mW (122809) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (123829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (124849) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (125869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (126889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (127909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (128929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (129949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (130969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (131989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (132459) HEALTH: Heap: 217256[0m
+[0;32mI (133009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (134029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (135049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (136069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (137089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (138109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (139129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (140149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (141169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (142189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (142459) HEALTH: Heap: 213452[0m
+[0;33mW (143129) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (143209) MAIN_APP: Env: Nominal (State: 0)[0m
+[1;31mE (143289) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (143289) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (144229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (145249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (146269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (147289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (148309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (149329) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (150349) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (151369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (151959) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (152389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (152459) HEALTH: Heap: 215004[0m
+[0;32mI (153409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (154429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (155449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (156469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (156969) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (157489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (158509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (159529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (160549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (161569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (161979) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (162459) HEALTH: Heap: 215004[0m
+[0;32mI (162589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (163609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (164629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (165649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (166669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (166989) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (167689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (168709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (169729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (170749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (171769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (171999) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (172459) HEALTH: Heap: 215004[0m
+[0;32mI (172789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (173809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (174829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (175849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (176869) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (177009) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (177889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (178909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (179929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (180949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (181969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (182459) HEALTH: Heap: 215004[0m
+[0;32mI (182989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (184009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (185029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (185969) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (186049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (187069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (188089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (189109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (190129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (191149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (192169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (192459) HEALTH: Heap: 217244[0m
+[0;32mI (193189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (194209) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (195229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (196249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (197269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (198289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (199309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (200329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (201349) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (202369) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (202459) HEALTH: Heap: 217244[0m
+[0;32mI (203389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (204409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (205429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (206449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (207469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (208489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (209509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (210529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (211549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (212459) HEALTH: Heap: 213444[0m
+[0;32mI (212569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (213589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (214609) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (215629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (216649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (217669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (218689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (219709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (220729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (221749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (222459) HEALTH: Heap: 214996[0m
+[0;32mI (222769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (223789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (224809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (224839) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (225829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (226849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (227869) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (228889) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (229849) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (229909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (230929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (231949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (232459) HEALTH: Heap: 215000[0m
+[0;32mI (232969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (233989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (234859) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (235009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (236029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (237049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (238069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (239089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (239869) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (240109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (241129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (242149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (242459) HEALTH: Heap: 216428[0m
+[0;32mI (243169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (244189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (245209) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (246229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (247249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (248269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (249289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (250309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (251329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (252349) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (252459) HEALTH: Heap: 216428[0m
+[0;33mW (253369) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (254389) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (255409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (256429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (257449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (258469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (259489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (260509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (261529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (262459) HEALTH: Heap: 217244[0m
+[0;32mI (262549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (263569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (264589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (265609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (266629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (267649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (268669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (269689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (270709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (271729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (272459) HEALTH: Heap: 217244[0m
+[0;32mI (272749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (273769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (274789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (275809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (276829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (277849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (278869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (279889) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (280909) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (281929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (282459) HEALTH: Heap: 217244[0m
+[0;32mI (282949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (283969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (284989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (286009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (287029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (288049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (289069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (290089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (291109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (292129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (292459) HEALTH: Heap: 217244[0m
+[0;32mI (293149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (294169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (295189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (296209) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (297229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (298249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (299269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (300289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (301309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (302329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (302459) HEALTH: Heap: 216968[0m
+[0;33mW (303349) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (304369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (305389) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (306409) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (307429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (308449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (309469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (310489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (311509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (312459) HEALTH: Heap: 217244[0m
+[0;32mI (312529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (313549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (314569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (315589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (316609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (317629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (318649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (319669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (320689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (321629) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (321709) MAIN_APP: Env: Nominal (State: 0)[0m
+[1;31mE (321879) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (321879) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (322459) HEALTH: Heap: 213464[0m
+[0;32mI (322729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (323749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (324769) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (325789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (326809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (327829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (328849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (329869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (330889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (331909) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (332459) HEALTH: Heap: 217264[0m
+[0;33mW (332929) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (333949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (334969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (335989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (337009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (338029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (339049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (340069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (341089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (342109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (342459) HEALTH: Heap: 217264[0m
+[0;32mI (343129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (344149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (345169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (346189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (347209) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (348229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (349249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (350269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (351289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (352309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (352459) HEALTH: Heap: 213452[0m
+[0;32mI (353329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (354349) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (355369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (356389) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (357409) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (358429) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (359449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (360469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (361489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (362459) HEALTH: Heap: 217264[0m
+[0;32mI (362509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (363529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (364549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (365569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (366589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (367609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (368629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (369649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (370669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (371689) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (372459) HEALTH: Heap: 217264[0m
+[0;32mI (372709) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (373729) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (374749) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (375769) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (376789) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (377809) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (378829) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (379849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (380869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (381889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (382459) HEALTH: Heap: 217264[0m
+[0;32mI (382909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (383929) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (384949) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (385969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (386989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (388009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (389029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (390049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (391069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (392089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (392459) HEALTH: Heap: 213452[0m
+[0;32mI (393109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (394129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (395149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (396169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (397189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (398209) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (399229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (400249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (401269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (402289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (402459) HEALTH: Heap: 215012[0m
+[0;32mI (403309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (404329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (405269) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (405349) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (406369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (407389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (408409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (409429) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (410279) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (410449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (411469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (412459) HEALTH: Heap: 216448[0m
+[0;32mI (412489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (413509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (414529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (415549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (416569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (417589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (418609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (419629) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (420559) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (420649) MAIN_APP: Env: Nominal (State: 0)[0m
+[1;31mE (421009) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (421009) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (421669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (422459) HEALTH: Heap: 213456[0m
+[0;32mI (422689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (423709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (424729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (425749) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (426769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (427789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (428809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (429829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (430849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (431869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (432459) HEALTH: Heap: 213456[0m
+[0;32mI (432889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (433909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (434929) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (435949) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (436969) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (437989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (439009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (440029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (441049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (442069) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (442459) HEALTH: Heap: 215016[0m
+[0;32mI (443089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (444109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (445129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (446069) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (446149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (447169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (448189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (449209) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (450229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (451249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (452269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (452459) HEALTH: Heap: 216440[0m
+[0;32mI (453289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (454309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (455329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (456349) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (457369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (458389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (459409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (460429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (461449) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (462459) HEALTH: Heap: 217268[0m
+[0;32mI (462469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (463489) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (464509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (465529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (466549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (467569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (468589) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (469609) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (470629) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (471649) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (472459) HEALTH: Heap: 217268[0m
+[1;31mE (472669) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (473689) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (474709) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (475729) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (476749) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (477769) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (478789) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (479809) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (480829) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (481849) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (482459) HEALTH: Heap: 217268[0m
+[1;31mE (482869) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (483889) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (484909) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (485929) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (486949) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (487969) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (488989) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (490009) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (491029) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (492049) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (492459) HEALTH: Heap: 213444[0m
+[1;31mE (493069) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (494089) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (495109) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (496129) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (497149) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (498169) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (499189) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (500209) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (501229) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (502249) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (502459) HEALTH: Heap: 216996[0m
+[1;31mE (503269) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (504289) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (505309) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (506329) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (507349) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (508369) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (509389) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (510409) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (511429) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (512449) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (512459) HEALTH: Heap: 213104[0m
+[0;33mW (513469) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (514489) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (515509) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (516529) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (517549) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (518569) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (519589) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (520609) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (521629) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (522459) HEALTH: Heap: 217268[0m
+[1;31mE (522649) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (523669) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (524689) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (525709) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (526729) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (527749) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (528769) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (529789) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (530809) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (531829) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (532459) HEALTH: Heap: 217080[0m
+[1;31mE (532849) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (533869) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (534889) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (535909) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (536929) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (537949) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (538969) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (539989) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (541009) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (542029) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (542459) HEALTH: Heap: 217080[0m
+[1;31mE (543049) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (544069) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (545089) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (546109) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (547129) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (548149) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (549169) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (550189) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (551209) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (552229) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (552459) HEALTH: Heap: 214816[0m
+[1;31mE (553249) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (554269) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (555289) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (556309) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (557329) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (558349) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (559369) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (560389) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (561409) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (562429) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (562459) HEALTH: Heap: 213256[0m
+[1;31mE (563449) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (564469) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (565489) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (566509) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (567529) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (568549) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (569569) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (570589) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (571529) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (571529) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (571529) HTTP_CLIENT: Close connection due to FIN received[0m
+[1;31mE (571609) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (572459) HEALTH: Heap: 213236[0m
+[1;31mE (572629) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (573649) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (574669) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (575689) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (576709) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (577729) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (578749) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (579769) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (580789) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (581809) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (582459) HEALTH: Heap: 214800[0m
+[0;32mI (582829) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (583849) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (584869) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (585799) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (585889) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (586909) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (587929) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (588949) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (589969) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (590809) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (590989) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (592009) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (592459) HEALTH: Heap: 217068[0m
+[0;33mW (593029) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (594049) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (595069) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (596089) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (597109) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (598129) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (599149) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (600169) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (601189) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (602209) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (602459) HEALTH: Heap: 216796[0m
+[0;32mI (603229) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (604249) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (605269) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (606289) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (607309) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (608329) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (609349) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (610369) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (611389) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (612409) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (612459) HEALTH: Heap: 213240[0m
+[0;32mI (613429) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (614449) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (615469) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (616489) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (617509) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (618529) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (619549) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (620569) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (621589) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (622459) HEALTH: Heap: 217068[0m
+[0;32mI (622609) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (623629) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (624649) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (625669) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (626689) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (627709) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (628729) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (629749) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (630769) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (631789) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (632459) HEALTH: Heap: 217068[0m
+[0;32mI (632809) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (633829) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (634849) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (635869) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (636889) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (637909) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (638929) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (639949) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (640969) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (641989) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (642459) HEALTH: Heap: 217068[0m
+[0;32mI (643009) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (644029) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (645049) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (646069) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (647089) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (648109) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (649129) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (650149) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (651169) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (652099) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (652189) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (652229) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (652229) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (652459) HEALTH: Heap: 212920[0m
+[0;32mI (653209) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (654229) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (655249) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (656269) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (657289) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (658309) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (659329) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (660349) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (661369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (662389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (662459) HEALTH: Heap: 214804[0m
+[0;32mI (663409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (664429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (665449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (666469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (667489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (668509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (669529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (670549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (671569) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (672459) HEALTH: Heap: 217076[0m
+[0;32mI (672589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (673609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (674629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (675649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (676669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (677689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (678709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (679729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (680749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (681769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (682459) HEALTH: Heap: 217076[0m
+[0;32mI (682789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (683809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (684829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (685849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (686869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (687889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (688909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (689929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (690949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (691969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (692459) HEALTH: Heap: 217076[0m
+[0;32mI (692989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (694009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (695029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (696049) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (697069) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (698089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (699109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (700129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (701149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (702169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (702459) HEALTH: Heap: 216532[0m
+[0;32mI (703189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (704209) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (705229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (706249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (707269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (708289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (709309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (710329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (711349) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (712369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (712459) HEALTH: Heap: 216260[0m
+[0;32mI (713389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (714409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (715429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (716449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (717469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (718489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (719509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (720529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (721549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (722459) HEALTH: Heap: 217076[0m
+[0;33mW (722569) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (723589) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (724609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (725629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (726649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (727669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (728689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (729709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (730729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (731749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (732459) HEALTH: Heap: 217076[0m
+[0;32mI (732769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (733789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (734809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (735829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (736849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (737869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (738889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (739909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (740929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (741949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (742459) HEALTH: Heap: 217076[0m
+[0;32mI (742969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (743989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (745009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (746029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (747049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (748069) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (749089) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (750109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (751129) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (752149) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (752459) HEALTH: Heap: 216792[0m
+[0;32mI (753169) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (754189) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (755209) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (756229) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (757249) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (758269) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (759289) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (760309) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (761329) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (762349) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (762459) HEALTH: Heap: 213244[0m
+[1;31mE (763369) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (764389) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (765409) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (766429) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (767359) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (767449) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (767739) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (767739) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;33mW (768469) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (769489) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (770509) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (771529) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (772459) HEALTH: Heap: 217080[0m
+[1;31mE (772549) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (773569) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (774589) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (775609) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (776629) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (777649) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (778669) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (779689) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (780709) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (781729) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (782459) HEALTH: Heap: 217080[0m
+[1;31mE (782749) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (783769) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (784789) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (785809) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (786829) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (787849) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (788869) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (789889) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (790909) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (791929) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (792459) HEALTH: Heap: 217080[0m
+[1;31mE (792949) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (793969) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (794989) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (796009) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (797029) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (798049) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (799069) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (800089) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (801109) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (802129) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (802459) HEALTH: Heap: 216804[0m
+[1;31mE (803149) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (804169) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (805189) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (806209) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (807229) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (808249) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (809269) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (810289) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (811309) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (812329) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (812459) HEALTH: Heap: 213252[0m
+[1;31mE (813349) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (814369) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (815389) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (816409) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (817429) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (818449) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (819469) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (820489) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (821509) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (822459) HEALTH: Heap: 217080[0m
+[1;31mE (822529) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (823549) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (824569) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (825589) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (826609) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (827629) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (828649) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (829669) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (830689) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (831709) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (832459) HEALTH: Heap: 217080[0m
+[1;31mE (832729) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (833749) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (834769) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (835789) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (836809) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (837829) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (838849) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (839869) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (840889) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (841909) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (842459) HEALTH: Heap: 217080[0m
+[1;31mE (842929) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (843949) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (844969) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (845989) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (847009) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (848029) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (849049) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (850069) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (851089) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (852109) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (852459) HEALTH: Heap: 217080[0m
+[1;31mE (853129) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (854149) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (855169) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (856189) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (857209) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (858229) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (859249) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (860269) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (861289) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (862309) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (862459) HEALTH: Heap: 216804[0m
+[1;31mE (863329) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (864349) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (865369) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (866389) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (867409) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (868429) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (869449) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (870469) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (871489) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (872459) HEALTH: Heap: 217080[0m
+[1;31mE (872509) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (873529) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (874549) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (875569) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (876589) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (877609) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (878629) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (879649) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (880669) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (881689) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (882459) HEALTH: Heap: 217080[0m
+[1;31mE (882709) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (883729) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (884749) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (885769) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (886789) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (887809) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (888829) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (889849) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (890869) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (891889) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (892459) HEALTH: Heap: 216804[0m
+[1;31mE (892909) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (893929) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (894949) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (895969) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (896989) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (898009) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (899029) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (900049) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (901069) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (902089) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (902459) HEALTH: Heap: 217080[0m
+[1;31mE (903109) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (904129) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (905149) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (906169) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (907189) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (908209) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (909229) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (910249) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (911269) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (912289) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (912459) HEALTH: Heap: 216804[0m
+[1;31mE (913309) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (914329) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (915349) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (916369) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (917389) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (918409) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (919429) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (920449) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (921469) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (922459) HEALTH: Heap: 217080[0m
+[0;32mI (922489) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (923509) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (924529) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (925549) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (926569) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (927589) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (928609) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (929629) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (930569) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (930649) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (930759) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (930759) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;33mW (931669) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (932459) HEALTH: Heap: 217080[0m
+[0;32mI (932689) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (933709) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (934729) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (935749) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (936769) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (937789) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (938809) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (939829) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (940849) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (941869) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (942459) HEALTH: Heap: 217080[0m
+[0;32mI (942889) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (943909) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (944929) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (945949) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (946969) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (947989) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (949009) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (950029) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (951049) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (952069) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (952459) HEALTH: Heap: 217080[0m
+[0;32mI (953089) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (954109) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (955129) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (956149) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (957169) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (958189) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (959209) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (960229) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (961249) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (962269) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (962459) HEALTH: Heap: 214820[0m
+[0;32mI (963289) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (964309) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (965329) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (966349) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (967369) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (968389) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (969409) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (970429) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (971449) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (972459) HEALTH: Heap: 217080[0m
+[0;32mI (972469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (973489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (974509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (975529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (976549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (977569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (978499) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (978589) MAIN_APP: Env: Nominal (State: 0)[0m
+[1;31mE (978779) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (978779) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (979609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (980629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (981649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (982459) HEALTH: Heap: 217068[0m
+[0;33mW (982669) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (983689) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (984709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (985729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (986749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (987769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (988789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (989809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (990829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (991849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (992459) HEALTH: Heap: 217068[0m
+[0;32mI (992869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (993889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (994909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (995929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (996949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (997969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (998989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1000009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1001029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1002049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1002459) HEALTH: Heap: 216792[0m
+[0;32mI (1003069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1004089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1005109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1006129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1007149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1008169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1009189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1010209) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1011229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1012249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1012459) HEALTH: Heap: 216792[0m
+[0;32mI (1013269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1014289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1015309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1016329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1017349) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1018369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1019389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1020409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1021429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1022449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1022459) HEALTH: Heap: 212920[0m
+[0;32mI (1023469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1024489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1025509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1026529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1027549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1028569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1029589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1030609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1031629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1032459) HEALTH: Heap: 217068[0m
+[0;32mI (1032649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1033669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1034689) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1035709) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1036729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1037749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1038769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1039789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1040809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1041829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1042459) HEALTH: Heap: 217068[0m
+[0;32mI (1042849) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1043869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1044889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1045909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1046929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1047949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1048969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1049989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1051009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1052029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1052459) HEALTH: Heap: 217068[0m
+[0;32mI (1053049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1054069) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1055089) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (1056109) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1057129) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1058149) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1059169) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1060189) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1061209) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1062229) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1062459) HEALTH: Heap: 217068[0m
+[1;31mE (1063249) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1064269) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1065289) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1066309) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1067329) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1068349) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1069369) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1070389) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1071409) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1072429) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1072459) HEALTH: Heap: 213232[0m
+[1;31mE (1073449) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1074469) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1075489) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1076509) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1077529) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1078549) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1079569) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1080589) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1081609) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1082459) HEALTH: Heap: 217068[0m
+[1;31mE (1082629) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1083649) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1084669) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1085689) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1086709) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1087729) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (1088749) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1089769) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1090789) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1091809) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1092459) HEALTH: Heap: 214792[0m
+[1;31mE (1092829) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1093849) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1094869) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1095889) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1096909) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1097929) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1098949) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1099969) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1100989) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1102009) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1102459) HEALTH: Heap: 217068[0m
+[1;31mE (1103029) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1104049) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1105069) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1106089) MAIN_APP: Sensor Read Error: -2[0m
+[1;31mE (1107109) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1108129) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1109149) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1110169) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1111189) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1112209) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1112459) HEALTH: Heap: 217068[0m
+[0;33mW (1113229) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1114249) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (1115269) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1116289) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1117309) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1118329) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1119349) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1120369) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1121389) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1122409) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1122459) HEALTH: Heap: 214792[0m
+[1;31mE (1123429) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1124449) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1125469) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1126489) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1127509) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1128529) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1129549) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1130569) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1131589) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1132459) HEALTH: Heap: 217068[0m
+[1;31mE (1132609) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1133629) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1134649) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1135669) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1136689) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1137709) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1138729) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1139669) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (1139749) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (1139989) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (1139989) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;33mW (1140769) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (1141789) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1142459) HEALTH: Heap: 217080[0m
+[1;31mE (1142809) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1143829) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1144849) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1145869) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1146889) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1147909) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1148929) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1149949) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1150969) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1151989) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1152459) HEALTH: Heap: 217080[0m
+[1;31mE (1153009) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1154029) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1155049) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1156069) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1157089) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1158109) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1159129) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1160149) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1161169) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1162189) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1162459) HEALTH: Heap: 216804[0m
+[1;31mE (1163209) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1164229) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1165249) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1166269) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (1167289) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1168309) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1169329) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1170349) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1171369) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1172389) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1172459) HEALTH: Heap: 214800[0m
+[1;31mE (1173409) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1174429) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1174859) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (1175449) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1176469) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1177489) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1178509) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1179529) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1179869) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (1180549) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1181569) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1182459) HEALTH: Heap: 214800[0m
+[1;31mE (1182589) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1183609) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1184629) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1184879) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (1185649) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1186669) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1187689) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1188709) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1189729) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1189889) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (1190749) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (1191769) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1192459) HEALTH: Heap: 214800[0m
+[1;31mE (1192789) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1193809) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1194829) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1195849) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (1196869) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1197889) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1198909) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1199929) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1200949) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1201969) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1202459) HEALTH: Heap: 214800[0m
+[0;33mW (1202539) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (1202989) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1204009) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1205029) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1206049) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1207069) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1208089) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1209109) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1210129) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1211149) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1212169) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1212459) HEALTH: Heap: 213248[0m
+[1;31mE (1213189) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1214209) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1215229) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1216249) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1217269) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1218289) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (1219309) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1219479) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (1220329) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1221349) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1222369) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1222459) HEALTH: Heap: 214808[0m
+[1;31mE (1223389) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1224409) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1224489) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (1225429) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1226449) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1227469) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1228489) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;33mW (1229499) HTTP_CLIENT: Connection timed out before data was ready![0m
+[1;31mE (1229509) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[1;31mE (1230529) MAIN_APP: 🚨 ALERT: CRITICAL: Overheat[0m
+[0;32mI (1231549) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1232459) HEALTH: Heap: 214808[0m
+[0;32mI (1232569) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1233589) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1234509) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (1234609) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1235629) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1236649) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1237669) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1238689) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1239519) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (1239709) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1240729) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1241749) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1242459) HEALTH: Heap: 214808[0m
+[0;33mW (1242769) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1243789) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1244529) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (1244809) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1245829) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1246849) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1247869) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1248889) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1249539) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (1249909) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1250929) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1251949) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1252459) HEALTH: Heap: 214808[0m
+[0;32mI (1252969) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1253989) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1254549) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (1255009) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1256029) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1257049) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1258069) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1259089) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1259559) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (1260109) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1261129) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1262149) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1262459) HEALTH: Heap: 214804[0m
+[0;32mI (1263169) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1264189) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1265209) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1266229) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1267249) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1267709) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (1268269) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1269289) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1270309) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1271329) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1272349) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1272459) HEALTH: Heap: 213236[0m
+[0;32mI (1273369) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1274389) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1275409) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1276429) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1277449) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1278469) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1279489) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1280509) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1281529) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1282459) HEALTH: Heap: 214800[0m
+[0;32mI (1282549) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1283569) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1284589) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1285609) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1286629) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1287649) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1288669) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1289689) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1290709) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1291729) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1292459) HEALTH: Heap: 213240[0m
+[0;33mW (1292749) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1293769) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1294789) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1295729) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (1295809) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (1296019) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (1296019) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;33mW (1296829) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1297849) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1298869) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1299889) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1300909) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1301929) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1302459) HEALTH: Heap: 217080[0m
+[0;32mI (1302949) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1303969) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1304989) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1306009) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1307029) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1308049) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1309069) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1310089) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1311109) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1312049) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (1312129) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (1312209) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (1312209) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (1312459) HEALTH: Heap: 212928[0m
+[0;32mI (1313149) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1314169) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1315189) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1316209) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1317229) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1318249) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1319269) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1320289) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1321309) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1322329) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1322459) HEALTH: Heap: 213748[0m
+[0;32mI (1323349) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1324369) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1325389) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1326409) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1327429) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1328449) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1329469) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1330489) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1331509) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1332459) HEALTH: Heap: 213748[0m
+[0;32mI (1332529) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1333549) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1334569) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1335589) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1336609) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1337629) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1338649) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1339669) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (1340689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1341709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1342459) HEALTH: Heap: 209924[0m
+[0;32mI (1342729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1343749) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (1344769) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1345789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1346809) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1347829) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1348849) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1349869) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1350889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1351909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1352459) HEALTH: Heap: 209936[0m
+[0;32mI (1352929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1353949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1354969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1355989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1357009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1358029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1359049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1360069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1361089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1362109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1362459) HEALTH: Heap: 213748[0m
+[0;32mI (1363129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1364149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1365169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1366189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1367209) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1368229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1369249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1370269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1371289) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1372309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1372459) HEALTH: Heap: 213204[0m
+[0;33mW (1373329) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1374349) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1375369) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1376389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1377409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1378429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1379449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1380469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1381489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1382459) HEALTH: Heap: 209936[0m
+[0;32mI (1382509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1383529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1384549) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1385569) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1386589) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1387609) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1388629) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1389649) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1390669) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1391689) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1392459) HEALTH: Heap: 209936[0m
+[0;32mI (1392709) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1393729) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1394749) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1395769) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1396789) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1397809) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1398829) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1399849) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1400869) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1401889) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1402459) HEALTH: Heap: 213748[0m
+[0;32mI (1402909) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1403929) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1404949) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1405969) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1406989) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1408009) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1409029) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1410049) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1411069) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1412089) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1412459) HEALTH: Heap: 209936[0m
+[0;32mI (1413109) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1414129) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1415149) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1416169) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1417189) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1418209) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1419229) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1420249) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1420799) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (1421269) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1422289) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1422459) HEALTH: Heap: 211496[0m
+[0;32mI (1423309) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1424329) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1425349) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (1426369) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (1427389) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1428409) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1429429) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1430449) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1431469) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1432459) HEALTH: Heap: 213256[0m
+[0;32mI (1432489) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1433509) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;32mI (1434529) MAIN_APP: Env: Nominal (State: 0)[0m
+[0;33mW (1434649) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (1435549) MAIN_APP: Env: No

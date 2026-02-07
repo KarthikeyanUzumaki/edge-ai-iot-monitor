@@ -1,0 +1,721 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\iot_monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\edge-ai-iot-monitor.elf C:\Users\karth\OneDrive\Desktop\edge-ai-iot-monitor\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2-2\tools\idf.py' '-p' 'COM5'
+	�"%=5
+[0;32mI (40) boot.esets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2-2-gf83622dfa-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  3 2026 20:56:52[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1e694h (124564) map[0m
+[0;32mI (130) esp_image: segment 1: paddr=0002e6bc vaddr=3ffb0000 size=0195ch (  6492) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a1130h (659760) map[0m
+[0;32mI (360) esp_image: segment 3: paddr=000d1158 vaddr=3ffb195c size=025d8h (  9688) load[0m
+[0;32mI (363) esp_image: segment 4: paddr=000d3738 vaddr=40080000 size=17ff0h ( 98288) load[0m
+[0;32mI (402) esp_image: segment 5: paddr=000eb730 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (414) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (414) boot: Disabling RNG early entropy source...[0m
+[0;32mI (424) cpu_start: Multicore app[0m
+[0;32mI (433) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (433) cpu_start: Pro cpu start user code[0m
+[0;32mI (433) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (435) app_init: Application information:[0m
+[0;32mI (439) app_init: Project name:     iot_monitor[0m
+[0;32mI (443) app_init: App version:      0e0dffd-dirty[0m
+[0;32mI (447) app_init: Compile time:     Feb  7 2026 13:34:45[0m
+[0;32mI (452) app_init: ELF file SHA256:  5a7170669...[0m
+[0;32mI (457) app_init: ESP-IDF:          v5.5.2-2-gf83622dfa-dirty[0m
+[0;32mI (462) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (466) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (470) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (474) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (480) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (485) heap_init: At 3FFB8840 len 000277C0 (157 KiB): DRAM[0m
+[0;32mI (490) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (496) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (501) heap_init: At 40098000 len 00008000 (32 KiB): IRAM[0m
+[0;33mW (508) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (520) spi_flash: detected chip: generic[0m
+[0;32mI (523) spi_flash: flash io: dio[0m
+[0;33mW (526) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (539) main_task: Started on CPU0[0m
+[0;32mI (549) main_task: Calling app_main()[0m
+[0;32mI (579) wifi:wifi driver task: 3ffc08b0, prio:23, stack:6656, core=0[0m
+[0;32mI (589) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (589) wifi:wifi certification version: v7.0[0m
+[0;32mI (589) wifi:config NVS flash: enabled[0m
+[0;32mI (589) wifi:config nano formatting: disabled[0m
+[0;32mI (589) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (599) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (599) wifi:Init management short buffer num: 32[0m
+[0;32mI (609) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (609) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (619) wifi:Init static rx buffer num: 10[0m
+[0;32mI (619) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (619) wifi_init: rx ba win: 6[0m
+[0;32mI (629) wifi_init: accept mbox: 6[0m
+[0;32mI (629) wifi_init: tcpip mbox: 32[0m
+[0;32mI (629) wifi_init: udp mbox: 6[0m
+[0;32mI (639) wifi_init: tcp mbox: 6[0m
+[0;32mI (639) wifi_init: tcp tx win: 5760[0m
+[0;32mI (639) wifi_init: tcp rx win: 5760[0m
+[0;32mI (639) wifi_init: tcp mss: 1440[0m
+[0;32mI (649) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (649) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (659) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (739) wifi:mode : sta (28:56:2f:77:a4:9c)[0m
+[0;32mI (739) wifi:enable tsf[0m
+[0;32mI (759) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (759) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (769) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (779) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (899) wifi:connected with ACT_0E41_5G, aid = 2, channel 10, BW20, bssid = b2:19:21:aa:0e:41[0m
+[0;32mI (899) wifi:security: WPA2-PSK, phy: bgn, rssi: -79[0m
+[0;32mI (909) wifi:pm start, type: 1[0m
+
+[0;32mI (909) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (949) wifi:<ba-add>idx:0 (ifx:0, b2:19:21:aa:0e:41), tid:0, ssn:2, winSize:64[0m
+[0;32mI (969) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2459) esp_netif_handlers: sta ip: 192.168.0.106, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2459) WIFI_MGR: Got IP: 192.168.0.106[0m
+[0;32mI (2479) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (2489) main_task: Returned from app_main()[0m
+[0;32mI (2489) HEALTH: Heap: 212276[0m
+[0;32mI (3499) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (4519) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (5539) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (6559) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (7579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (8599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (9619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (10639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (11659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (12489) HEALTH: Heap: 214948[0m
+[0;32mI (12679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (13699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (14719) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (15739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (16759) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (16939) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (17779) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (18799) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (19819) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (20839) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (21859) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (21949) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (22489) HEALTH: Heap: 214948[0m
+[0;32mI (22879) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (23899) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (24919) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (25939) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (26959) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (26959) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (27979) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (28999) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (30019) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (31039) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (31969) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (32059) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (32489) HEALTH: Heap: 214948[0m
+[0;32mI (33079) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (34099) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (35119) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (36139) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (36979) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (37159) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (38179) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (39199) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (40219) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (41239) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (41989) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (42259) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (42489) HEALTH: Heap: 214948[0m
+[0;32mI (43279) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (44299) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (45319) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (46339) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (46999) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (47359) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (48379) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (49399) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (50419) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (51439) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (52009) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (52459) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (52489) HEALTH: Heap: 214948[0m
+[0;32mI (53479) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (54499) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (55519) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (56539) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (57019) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (57559) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (58579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (59599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (60619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (61639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (62029) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (62489) HEALTH: Heap: 214948[0m
+[0;32mI (62659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (63679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (64699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (65719) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (66739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (67759) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (68779) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (69799) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (70659) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (70819) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (71739) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (71739) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (71839) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (72489) HEALTH: Heap: 213036[0m
+[0;33mW (72859) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (73879) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (74899) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (75919) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (76939) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (77959) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (78749) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (78979) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (79999) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (81019) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (82039) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (82489) HEALTH: Heap: 211612[0m
+[0;32mI (83059) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (84079) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (85099) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (86119) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (87139) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (88159) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (88309) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (89179) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (89359) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (89359) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (90199) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (91219) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (92239) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (92489) HEALTH: Heap: 214940[0m
+[0;32mI (93259) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (94279) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (95299) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (95649) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (96319) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (97339) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (98359) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (99379) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (100399) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (101419) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (102439) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (102489) HEALTH: Heap: 213060[0m
+[0;32mI (103459) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (104479) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (105499) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (106519) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (107459) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (107539) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (107579) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (107579) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (108559) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (109579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (110599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (111619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (112489) HEALTH: Heap: 216368[0m
+[1;31mE (112599) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (112599) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (112599) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (112639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (113659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (114679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (115699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (116719) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (117739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (117969) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (118759) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (119779) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (120799) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (121819) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (122489) HEALTH: Heap: 213408[0m
+[0;32mI (122839) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (123189) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (123859) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (124269) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (124269) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;33mW (124879) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (125899) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (126919) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (127939) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (128959) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (129979) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (130999) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (132019) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (132489) HEALTH: Heap: 214960[0m
+[0;32mI (133039) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (134059) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (135079) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (136099) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (137119) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (138139) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (139159) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (140179) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (141199) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (142219) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (142489) HEALTH: Heap: 217248[0m
+[0;32mI (143239) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (144259) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (145279) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (146299) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (147319) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (148339) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (149359) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (150379) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (151399) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (152419) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (152489) HEALTH: Heap: 217248[0m
+[0;32mI (153439) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (154459) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (155479) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (156499) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (157519) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (158459) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (158539) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (159559) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (160579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (161599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (162489) HEALTH: Heap: 213400[0m
+[0;32mI (162619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (163639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (164659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (165679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (166319) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (166699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (167719) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (168739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (169759) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (170779) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (171799) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (172489) HEALTH: Heap: 213404[0m
+[0;32mI (172819) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (173839) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (174749) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (174859) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (175879) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (176899) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (177919) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (178939) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (179759) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (179959) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (180979) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (181999) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (182489) HEALTH: Heap: 214976[0m
+[0;32mI (183019) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (184039) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (184769) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (185059) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (186079) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (187099) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (188119) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (189139) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (189779) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (190159) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (191179) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (192199) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (192489) HEALTH: Heap: 214988[0m
+[0;32mI (193219) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (194239) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (194789) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (195259) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (196279) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (197299) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (198319) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (199339) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (199799) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (200359) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (201379) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (202399) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (202489) HEALTH: Heap: 214988[0m
+[0;33mW (203419) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (204439) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (204809) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (205459) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (206479) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (207499) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (208519) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (209539) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (209819) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (210559) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (211579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (212489) HEALTH: Heap: 214988[0m
+[0;32mI (212599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (213619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (214639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (214829) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (215659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (216679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (217699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (218719) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (219739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (219839) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (220759) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (221779) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (222489) HEALTH: Heap: 214988[0m
+[0;32mI (222799) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (223819) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (224839) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (225859) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (226879) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (227899) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (228069) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (228919) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (229129) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (229129) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (229939) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (230959) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (231979) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (232489) HEALTH: Heap: 210076[0m
+[0;32mI (232999) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (234019) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (235039) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (236059) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (236199) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (236199) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (237079) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (238099) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (239119) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (240139) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (241159) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (242179) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (242489) HEALTH: Heap: 213648[0m
+[0;32mI (243199) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (244219) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (245239) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (246259) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (247279) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (248299) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (249239) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (249319) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (250339) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (251359) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (252379) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (252489) HEALTH: Heap: 210080[0m
+[0;33mW (253399) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (254419) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (255439) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (256459) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (257479) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (258499) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (259519) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (260539) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (261559) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (262489) HEALTH: Heap: 213424[0m
+[0;32mI (262579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (263599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (264619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (265639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (266659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (267679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (268699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (269719) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (270739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (271759) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (272489) HEALTH: Heap: 217256[0m
+[0;32mI (272779) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (273799) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (274819) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (275839) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (276859) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (277879) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (278899) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (279919) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (280939) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (281959) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (282489) HEALTH: Heap: 213424[0m
+[0;33mW (282899) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;33mW (282979) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (283089) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (283089) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (283999) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (285019) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (286039) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (287059) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (288079) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (289099) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (290119) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (291139) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (292159) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (292489) HEALTH: Heap: 214988[0m
+[0;32mI (293179) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (294199) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (295219) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (296239) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (297259) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (298279) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (299299) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (300319) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (301339) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (302359) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (302489) HEALTH: Heap: 213428[0m
+[0;32mI (303379) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (304399) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (305419) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (306439) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (307459) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (308479) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (309499) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (310519) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (311539) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (312489) HEALTH: Heap: 214988[0m
+[0;32mI (312559) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (313579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (314599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (315619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (316639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (317659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (318679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (319699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (320719) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (321739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (322489) HEALTH: Heap: 217244[0m
+[0;32mI (322759) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (323779) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (324799) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (325819) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (326839) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (327859) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (328879) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (329899) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (330919) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (331939) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (332489) HEALTH: Heap: 217244[0m
+[0;33mW (332959) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (333979) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (334999) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (336019) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (337039) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (338059) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (339079) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (340099) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (341119) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (342139) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (342489) HEALTH: Heap: 216972[0m
+[0;33mW (343159) MAIN_APP: Sensor Read Error: -1[0m
+[1;31mE (344179) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (345199) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (346219) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (347239) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (348259) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (349279) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (350299) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (351319) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (352339) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[0;32mI (352489) HEALTH: Heap: 213428[0m
+[1;31mE (353359) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (354379) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (355399) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[1;31mE (356419) MAIN_APP: 🚨 ALERT: CRITICAL: Moisture[0m
+[0;32mI (357439) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (358459) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (359479) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (360499) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (361519) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (362489) HEALTH: Heap: 217248[0m
+[0;32mI (362539) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (363559) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (364579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (365599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (366619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (367639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (368659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (369679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (370699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (371719) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (372489) HEALTH: Heap: 217252[0m
+[0;32mI (372739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (373759) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (374779) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (375799) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (376819) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (377839) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (378859) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (379879) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (380899) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (381919) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (382489) HEALTH: Heap: 217252[0m
+[0;32mI (382939) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (383959) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (384979) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (385999) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (387019) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (388039) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (389059) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (390079) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (391099) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (392119) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (392489) HEALTH: Heap: 217252[0m
+[0;32mI (393139) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (394159) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (395179) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (396199) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (397219) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (398239) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (399259) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (400279) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (401299) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (402319) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (402489) HEALTH: Heap: 213428[0m
+[0;32mI (403339) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (404359) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (405379) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (406399) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (407419) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (408439) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (409459) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (410479) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (411499) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (412489) HEALTH: Heap: 217252[0m
+[0;33mW (412519) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (413539) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (414559) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (415579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (416599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (417619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (418639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (419659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (420679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (421699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (422489) HEALTH: Heap: 217252[0m
+[0;32mI (422719) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (423739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (424759) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (425779) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (426799) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (427819) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (428839) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (429859) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (430879) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (431899) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (432489) HEALTH: Heap: 213428[0m
+[0;32mI (432919) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (433939) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (434879) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (434959) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (435059) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (435059) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (435979) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (436999) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (438019) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (439039) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (440059) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (441079) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (442099) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (442489) HEALTH: Heap: 216976[0m
+[0;32mI (443119) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (444139) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (445159) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (446179) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (447199) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (448219) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (449239) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (450259) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (451279) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (452299) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (452489) HEALTH: Heap: 216976[0m
+[0;32mI (453319) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (454339) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (455359) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (456379) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (457399) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (458419) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (459359) HTTP_CLIENT: Connection timed out before data was ready![0m
+[0;32mI (459439) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[1;31mE (459629) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;33mW (459629) HTTP_CLIENT: Close connection due to FIN received[0m
+[0;32mI (460459) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (461479) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (462489) HEALTH: Heap: 213920[0m
+[0;32mI (462499) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (463519) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (464539) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (465559) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (466579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (467599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (468619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (469639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (470659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (471679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (472489) HEALTH: Heap: 217252[0m
+[0;32mI (472699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (473719) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (474739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (475759) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (476779) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (477799) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (478819) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (479839) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (480859) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (481879) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (482489) HEALTH: Heap: 217252[0m
+[0;32mI (482899) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (483919) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (484939) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (485959) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (486979) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (487999) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (489019) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (490039) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (491059) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (492079) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (492489) HEALTH: Heap: 217252[0m
+[0;32mI (493099) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (494119) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (495139) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (496159) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (497179) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (498199) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (499219) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (500239) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (501259) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (502279) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (502489) HEALTH: Heap: 216976[0m
+[0;32mI (503299) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (504319) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (505339) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (506359) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (507379) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (508399) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (509419) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (510439) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (511459) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (512479) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (512489) HEALTH: Heap: 213084[0m
+[0;32mI (513499) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (514519) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;33mW (515539) MAIN_APP: Sensor Read Error: -1[0m
+[0;33mW (516559) MAIN_APP: Sensor Read Error: -1[0m
+[0;32mI (517579) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (518599) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (519619) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (520639) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (521659) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (522489) HEALTH: Heap: 217252[0m
+[0;32mI (522679) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (523699) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (524719) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (525739) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m
+[0;32mI (526759) MAIN_APP: Env: WARNING: Limits near (State: 1)[0m

@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#define TEMP_WARN_THRESH 28.0
-#define TEMP_CRIT_THRESH 32.0
-#define HUM_WARN_THRESH 70.0
-#define HUM_CRIT_THRESH 85.0
+#define TEMP_WARN_THRESH  34.0  
+#define TEMP_CRIT_THRESH  36.0  
+#define HUM_WARN_THRESH   75.0
+#define HUM_CRIT_THRESH   90.0
 
 inference_result_t analyze_environment(float temp, float hum) {
   inference_result_t result;
